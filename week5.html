@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Programming - Function Parameters and Scope</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Programming</h1>
+        <h2>Week 3: Function Parameters, Scope, and Built-in Functions</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
+                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
+                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
+                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
+                    <li><a href="week5.html" class="active">Week 5 Overview</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>This week, we dive deeper into Python functions by learning about function parameters, scope, and using built-in functions. Understanding these concepts is essential for writing clean, reusable code.</p>
+            </section>
+
+            <section class="function-parameters">
+                <h2>Function Parameters</h2>
+                <p>Function parameters allow you to pass data into a function, making it more flexible and reusable. You define parameters in the function's definition and pass arguments to them when calling the function.</p>
+                <p>Example:</p>
+                <pre class="code-block">def greet(name):
+    print("Hello, " + name)
+
+greet("Alice")</pre>
+                <p>Here, <code>name</code> is a parameter, and <code>"Alice"</code> is the argument passed to it when the function is called.</p>
+
+                <h3>Default Parameters</h3>
+                <p>In Python, you can assign default values to parameters. This means that if an argument is not provided for that parameter when the function is called, the default value will be used.</p>
+                <p>Example:</p>
+                <pre class="code-block">def greet(name, greeting="Hello"):
+    print(greeting + ", " + name)
+
+greet("Alice")
+greet("Bob", "Hi")</pre>
+                <p>In the above example, <code>greeting</code> has a default value of <code>"Hello"</code>. When <code>greet("Alice")</code> is called, the default greeting is used. When <code>greet("Bob", "Hi")</code> is called, the default greeting is overridden by <code>"Hi"</code>.</p>
+            </section>
+
+            <section class="scope">
+                <h2>Scope</h2>
+                <p>Scope refers to the visibility of variables within different parts of a program. In Python, variables defined inside a function are local to that function and cannot be accessed outside of it.</p>
+                <p>Example:</p>
+                <pre class="code-block">def my_function():
+    x = 10  # Local variable
+    print(x)
+
+my_function()
+print(x)  # This will cause an error because x is not accessible here</pre>
+                <p>In the above example, the variable <code>x</code> is local to <code>my_function()</code> and cannot be used outside of it.</p>
+            </section>
+
+            <section class="builtin-functions">
+                <h2>Using Built-in Python Functions</h2>
+                <p>Python comes with a number of built-in functions that you can use to perform common tasks. These functions are always available and do not require any additional code to use.</p>
+                <p>Examples of built-in functions:</p>
+                <ul>
+                    <li><b>len()</b>: Returns the length of an object.</li>
+                    <li><b>max()</b>: Returns the largest item in an iterable.</li>
+                    <li><b>min()</b>: Returns the smallest item in an iterable.</li>
+                    <li><b>sum()</b>: Sums the items of an iterable.</li>
+                    <li><b>type()</b>: Returns the type of an object.</li>
+                </ul>
+                <p>Example:</p>
+                <pre class="code-block">numbers = [1, 2, 3, 4, 5]
+print("Length:", len(numbers))
+print("Max:", max(numbers))
+print("Min:", min(numbers))
+print("Sum:", sum(numbers))
+print("Type:", type(numbers))</pre>
+            </section>
+
+            <section class="practice">
+                <h2>Practice</h2>
+                <h3>1. Function with Parameters</h3>
+                <p>Create a function called <code>add_numbers</code> that takes two parameters, adds them together, and returns the result. Test the function by passing different arguments.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 3)
+print(result)</pre>
+                    </div>
+                </details>
+
+                <h3>2. Function Scope</h3>
+                <p>Write a function <code>outer_function</code> that defines a local variable <code>x</code> and calls another function <code>inner_function</code> that tries to print <code>x</code>. See what happens.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def outer_function():
+    x = 10
+    
+    def inner_function():
+        print(x)
+    
+    inner_function()
+
+outer_function()</pre>
+                    </div>
+                </details>
+
+                <h3>3. Built-in Functions</h3>
+                <p>Use the built-in <code>max()</code> and <code>min()</code> functions to find the largest and smallest numbers in a list. Create a list with at least 5 numbers.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">numbers = [5, 10, 3, 8, 2]
+print("Max:", max(numbers))
+print("Min:", min(numbers))</pre>
+                    </div>
+                </details>
+
+                <h3>4. Modify a Function to Use Parameters</h3>
+                <p>Modify the <code>greet()</code> function so that it takes two parameters: <code>name</code> and <code>age</code>. The function should print a message that includes both the name and age.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def greet(name, age):
+    print("Hello, " + name + ". You are " + str(age) + " years old.")
+
+greet("Alice", 25)</pre>
+                    </div>
+                </details>
+
+                <h3>5. Using Scope</h3>
+                <p>Create a function <code>calculate_area</code> that calculates the area of a rectangle. Define variables for length and width inside the function and return the area. Ensure that these variables are not accessible outside the function.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def calculate_area():
+    length = 5
+    width = 3
+    return length * width
+
+area = calculate_area()
+print(area)</pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 We Codez</p>
+    </footer>
+</body>
+</html>
