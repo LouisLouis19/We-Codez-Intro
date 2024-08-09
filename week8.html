@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Programming - Python Data Structures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Programming</h1>
+        <h2>Week 6: Python Data Structures - Dictionaries and Sets</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
+                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
+                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
+                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
+                    <li><a href="week5.html">Week 5 - Python Functions (Part 2)</a></li>
+                    <li><a href="week6.html">Week 6 - Python Functions (Part 3)</a></li>
+                    <li><a href="week7.html">Week 7 - Data Structures</a></li>
+                    <li><a href="week8.html" class="active">Week 8 Overview</a></li>
+                    <li><a href="week9.html">Week 9 - Data Structures (Part 3)</a></li>
+                    <li><a href="week10.html">Week 10 - Algorithms</a></li>
+                    <li><a href="week11.html">Week 11 - Algorithms (Part 2)</a></li>
+                    <li><a href="week12.html">Week 12 - Algorithms (Part 3)</a></li>
+                    <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
+                    <li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="project.html">Project</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>This week, we will explore Python dictionaries and sets, two powerful data structures that allow you to manage data in unique ways. You will learn how to create and manipulate these structures and understand their use cases.</p>
+            </section>
+
+            <section class="dictionaries">
+                <h2>Python Dictionaries</h2>
+                <p>A dictionary is an unordered, mutable collection of key-value pairs. Each key is unique, and it is associated with a value. Dictionaries are perfect for storing data that you want to quickly look up by key.</p>
+                
+                <h3>Creating Dictionaries and Accessing Values by Key</h3>
+                <p>Dictionaries are created using curly braces <code>{}</code>, with key-value pairs separated by colons.</p>
+                <pre class="code-block"># Creating a dictionary
+student = {"name": "John", "age": 22, "major": "Computer Science"}
+print(student["name"])  # Accessing the value associated with the key 'name'</pre>
+
+                <h3>Basic Operations</h3>
+                <ul>
+                    <li><b>Adding:</b> Add a new key-value pair to the dictionary.</li>
+                    <li><b>Updating:</b> Update the value of an existing key.</li>
+                    <li><b>Removing:</b> Remove a key-value pair from the dictionary using <code>del</code> or the <code>pop()</code> method.</li>
+                </ul>
+                <pre class="code-block"># Adding and updating elements
+student["graduation_year"] = 2024  # Adding a new key-value pair
+student["age"] = 23  # Updating the value of an existing key
+
+# Removing an element
+del student["major"]  # Removes the key 'major' and its value
+graduation_year = student.pop("graduation_year")  # Removes and returns the value associated with 'graduation_year'</pre>
+
+                <h3>Dictionary Methods</h3>
+                <p>Python provides several built-in methods for dictionaries:</p>
+                <ul>
+                    <li><b>get():</b> Returns the value for a key, or a default value if the key does not exist.</li>
+                    <li><b>keys():</b> Returns a view object of all keys in the dictionary.</li>
+                    <li><b>values():</b> Returns a view object of all values in the dictionary.</li>
+                    <li><b>items():</b> Returns a view object of all key-value pairs in the dictionary as tuples.</li>
+                </ul>
+                <pre class="code-block"># Using dictionary methods
+name = student.get("name", "Unknown")  # Returns 'John'
+keys = student.keys()  # Returns a view object of all keys
+values = student.values()  # Returns a view object of all values
+items = student.items()  # Returns a view object of all key-value pairs</pre>
+            </section>
+
+            <section class="sets">
+                <h2>Python Sets</h2>
+                <p>A set is an unordered collection of unique elements. Sets are useful for storing items where duplicates are not allowed, and you need to perform fast membership tests.</p>
+                
+                <h3>Creating Sets and Basic Operations</h3>
+                <p>Sets are created using curly braces <code>{}</code> or the <code>set()</code> function.</p>
+                <pre class="code-block"># Creating a set
+fruits = {"apple", "banana", "cherry"}
+empty_set = set()  # Creating an empty set</pre>
+
+                <h3>Basic Operations</h3>
+                <ul>
+                    <li><b>Adding:</b> Add an element to the set using the <code>add()</code> method.</li>
+                    <li><b>Removing:</b> Remove an element using the <code>remove()</code> or <code>discard()</code> method.</li>
+                </ul>
+                <pre class="code-block"># Adding and removing elements
+fruits.add("orange")  # Adds 'orange' to the set
+fruits.remove("banana")  # Removes 'banana' from the set (raises KeyError if not found)
+fruits.discard("pear")  # Removes 'pear' if it exists (no error if not found)</pre>
+
+                <h3>Set Methods</h3>
+                <p>Python provides several built-in methods for sets:</p>
+                <ul>
+                    <li><b>add():</b> Adds an element to the set.</li>
+                    <li><b>remove():</b> Removes an element from the set (raises an error if the element does not exist).</li>
+                    <li><b>discard():</b> Removes an element from the set (does nothing if the element does not exist).</li>
+                    <li><b>union():</b> Returns a new set with elements from both sets.</li>
+                    <li><b>intersection():</b> Returns a new set with elements common to both sets.</li>
+                    <li><b>difference():</b> Returns a new set with elements in the first set but not in the second.</li>
+                </ul>
+                <pre class="code-block"># Set operations
+set_a = {"apple", "banana", "cherry"}
+set_b = {"banana", "orange", "grape"}
+
+union_set = set_a.union(set_b)  # {'apple', 'banana', 'cherry', 'orange', 'grape'}
+intersection_set = set_a.intersection(set_b)  # {'banana'}
+difference_set = set_a.difference(set_b)  # {'apple', 'cherry'}</pre>
+
+                <h3>Use Cases and Differences Between Sets and Lists</h3>
+                <ul>
+                    <li><b>Uniqueness:</b> Sets automatically remove duplicate elements, making them ideal for tasks like removing duplicates from a list.</li>
+                    <li><b>Efficiency:</b> Sets are optimized for membership tests, making them faster than lists for checking if an item exists.</li>
+                    <li><b>Order:</b> Lists maintain the order of elements, whereas sets do not.</li>
+                </ul>
+            </section>
+
+            <section class="practice">
+                <h2>Practice</h2>
+                <h3>1. Create and Manipulate Dictionaries</h3>
+                <p>Create a dictionary representing a book with keys for title, author, and year. Add a key for genre, update the year, and remove the author.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">book = {"title": "1984", "author": "George Orwell", "year": 1949}
+book["genre"] = "Dystopian"
+book["year"] = 1950
+del book["author"]
+print(book)  # {'title': '1984', 'year': 1950, 'genre': 'Dystopian'}</pre>
+                    </div>
+                </details>
+
+                <h3>2. Practice Using Dictionary Methods</h3>
+                <p>Given a dictionary of student grades, print all the keys, values, and items in the dictionary.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">grades = {"John": "A", "Alice": "B", "Bob": "C"}
+print(grades.keys())  # dict_keys(['John', 'Alice', 'Bob'])
+print(grades.values())  # dict_values(['A', 'B', 'C'])
+print(grades.items())  # dict_items([('John', 'A'), ('Alice', 'B'), ('Bob', 'C')])</pre>
+                    </div>
+                </details>
+
+                <h3>3. Create and Manipulate Sets</h3>
+                <p>Create a set of numbers, add a new number, and then remove a number. Print the final set.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">numbers = {1, 2, 3}
+numbers.add(4)
+numbers.remove(2)
+print(numbers)  # {1, 3, 4}</pre>
+                    </div>
+                </details>
+
+                <h3>4. Practice Using Set Operations</h3>
+                <p>Given two sets, find their union, intersection, and difference.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">set1 = {"a", "b", "c"}
+set2 = {"b", "c", "d"}
+
+union_set = set1.union(set2)
+intersection_set = set1.intersection(set2)
+difference_set = set1.difference(set2)
+
+print(union_set)  # {'a', 'b', 'c', 'd'}
+print(intersection_set)  # {'b', 'c'}
+print(difference_set)  # {'a'}</pre>
+                    </div>
+                </details>
+
+                <h3>5. Apply Sets in Real-World Scenarios</h3>
+                <p>Imagine you have two lists of email addresses, and you want to find the addresses that appear in both lists. Use a set to solve this problem.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">emails_list1 = ["a@example.com", "b@example.com", "c@example.com"]
+emails_list2 = ["b@example.com", "c@example.com", "d@example.com"]
+
+set1 = set(emails_list1)
+set2 = set(emails_list2)
+
+common_emails = set1.intersection(set2)
+print(common_emails)  # {'b@example.com', 'c@example.com'}</pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 We Codez</p>
+    </footer>
+</body>
+</html>
