@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Programming - Week 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Programming</h1>
+        <h2>Week 2: Control Flow - If/Else Statements & For Loops</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
+                    <li><a href="week2.html" class="active">Week 2 Overview</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>This week, we will explore control flow in programming, focusing on `if/else` statements and the basics of `for` loops in Python.</p>
+            </section>
+
+            <section class="conditionals">
+                <h2>If/Else Statements</h2>
+                <p>Conditional statements allow you to execute certain parts of your code based on specific conditions. The `if/else` structure in Python is one of the fundamental tools for decision-making in code.</p>
+                <p>Basic structure:</p>
+                <pre class="code-block">if condition:
+    # Code to execute if the condition is True
+else:
+    # Code to execute if the condition is False</pre>
+
+                <p>Example:</p>
+                <pre class="code-block">age = 20
+
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")</pre>
+
+                <p>In this example, the program checks if the value of `age` is greater than or equal to 18. If true, it prints "You are an adult." Otherwise, it prints "You are a minor."</p>
+            </section>
+
+            <section class="else-if">
+                <h2>Elif Statements</h2>
+                <p>Python also allows you to chain multiple conditions using `elif` (short for "else if"). This is useful when you want to check several conditions in sequence.</p>
+                <p>Example:</p>
+                <pre class="code-block">score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")</pre>
+
+                <p>Here, the program checks the value of `score` and prints the corresponding grade. If none of the conditions are met, it defaults to "Grade: F".</p>
+            </section>
+
+            <section class="loops">
+                <h2>For Loops</h2>
+                <p>`For` loops in Python are used to iterate over a sequence (such as a list, tuple, or string) and execute a block of code for each item in the sequence.</p>
+                <p>Basic structure:</p>
+                <pre class="code-block">for item in sequence:
+    # Code to execute for each item</pre>
+
+                <p>Example:</p>
+                <pre class="code-block">fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)</pre>
+
+                <p>In this example, the `for` loop iterates over the `fruits` list and prints each item. The output will be:</p>
+                <pre class="code-block">apple
+banana
+cherry</pre>
+            </section>
+
+            <section class="nested-loops">
+                <h2>Nested Loops</h2>
+                <p>Python allows you to nest loops inside other loops. This can be useful for working with multi-dimensional data, such as lists of lists.</p>
+                <p>Example:</p>
+                <pre class="code-block">matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for row in matrix:
+    for item in row:
+        print(item, end=" ")
+    print()  # Prints a new line after each row</pre>
+
+                <p>This code iterates over each row in the `matrix` and then over each item in that row. The output will be:</p>
+                <pre class="code-block">1 2 3
+4 5 6
+7 8 9</pre>
+            </section>
+
+            <section class="task">
+                <h2>Practice</h2>
+                <p>Try out these exercises to reinforce your understanding:</p>
+
+                <h3>1. Simple If/Else Statement</h3>
+                <p>Write an `if/else` statement that checks if a number is positive or negative, and prints a message accordingly.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">number = -5
+
+if number >= 0:
+    print("The number is positive.")
+else:
+    print("The number is negative.")</pre>
+                    </div>
+                </details>
+
+                <h3>2. Elif Statement</h3>
+                <p>Write a program that categorizes a person's age into "Child," "Teenager," "Adult," or "Senior" based on their age.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">age = 65
+
+if age < 13:
+    print("Child")
+elif 13 <= age < 20:
+    print("Teenager")
+elif 20 <= age < 65:
+    print("Adult")
+else:
+    print("Senior")</pre>
+                    </div>
+                </details>
+
+                <h3>3. For Loop</h3>
+                <p>Create a `for` loop that prints the square of each number in a list.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    print(number ** 2)</pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 We Codez</p>
+    </footer>
+</body>
+</html>
