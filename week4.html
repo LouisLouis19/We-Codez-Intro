@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Programming - Week 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Programming</h1>
+        <h2>Week 4: Introduction to Python Functions</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
+                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
+                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
+                    <li><a href="week4.html" class="active">Week 4 Overview</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>This week, we will explore the basics of functions in Python. Functions are a fundamental concept in programming that allow you to organize your code, make it reusable, and improve its readability.</p>
+            </section>
+
+            <section class="what-are-functions">
+                <h2>What Are Functions?</h2>
+                <p>A function is a block of organized, reusable code that performs a specific task. Functions provide better modularity for your application and a high degree of code reusability.</p>
+                <p>Python has many built-in functions like `print()`, `len()`, `type()`, etc. In addition to using these, you can also create your own functions to perform specific tasks.</p>
+            </section>
+
+            <section class="creating-functions">
+                <h2>Creating a Function in Python</h2>
+                <p>In Python, a function is defined using the `def` keyword, followed by the function name and parentheses `()`.</p>
+                <p>Basic syntax:</p>
+                <pre class="code-block">def function_name():
+    # Code block to be executed when the function is called
+    pass</pre>
+
+                <p>Example:</p>
+                <pre class="code-block">def greet():
+    print("Hello, welcome to Python functions!")</pre>
+
+                <p>To call a function, use the function name followed by parentheses:</p>
+                <pre class="code-block">greet()  # Output: Hello, welcome to Python functions!</pre>
+            </section>
+
+            <section class="function-parameters">
+                <h2>Function Parameters</h2>
+                <p>Functions can accept parameters, which allow you to pass data into the function. These parameters are specified within the parentheses when defining the function.</p>
+                <p>Example:</p>
+                <pre class="code-block">def greet(name):
+    print("Hello, " + name + "! Welcome to Python functions!")</pre>
+
+                <p>You can now pass an argument when calling the function:</p>
+                <pre class="code-block">greet("Louis")  # Output: Hello, Louis! Welcome to Python functions!</pre>
+
+                <p>You can also define functions with multiple parameters:</p>
+                <pre class="code-block">def add_numbers(a, b):
+    return a + b</pre>
+
+                <p>To call this function:</p>
+                <pre class="code-block">result = add_numbers(5, 3)
+print(result)  # Output: 8</pre>
+            </section>
+
+            <section class="return-statement">
+                <h2>The Return Statement</h2>
+                <p>The `return` statement is used to send a result back to the caller. If a function doesn't have a `return` statement, it returns `None` by default.</p>
+                <p>Example:</p>
+                <pre class="code-block">def multiply(a, b):
+    return a * b
+
+result = multiply(4, 5)
+print(result)  # Output: 20</pre>
+
+                <p>Here, the function `multiply` returns the product of `a` and `b` to the caller, which is then stored in the variable `result`.</p>
+            </section>
+
+            <section class="practice">
+                <h2>Practice Problems</h2>
+
+                <h3>1. Simple Greeting Function</h3>
+                <p>Create a function called `greet_user` that takes a name as a parameter and prints "Hello, [name]!".</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def greet_user(name):
+    print("Hello, " + name + "!")
+
+greet_user("Alice")  # Output: Hello, Alice!</pre>
+                    </div>
+                </details>
+
+                <h3>2. Temperature Converter</h3>
+                <p>Create a function called `celsius_to_fahrenheit` that takes a temperature in Celsius as a parameter and returns the temperature in Fahrenheit.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+print(celsius_to_fahrenheit(25))  # Output: 77.0</pre>
+                    </div>
+                </details>
+
+                <h3>3. Calculate Area of a Circle</h3>
+                <p>Create a function called `area_of_circle` that takes the radius as a parameter and returns the area of the circle. (Use the formula: `area = π * r^2`, where `π` can be approximated as `3.14159`.)</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def area_of_circle(radius):
+    pi = 3.14159
+    return pi * (radius ** 2)
+
+print(area_of_circle(5))  # Output: 78.53975</pre>
+                    </div>
+                </details>
+
+                <h3>4. Check Even or Odd</h3>
+                <p>Create a function called `is_even` that takes an integer as a parameter and returns `True` if the number is even, and `False` if it's odd.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def is_even(number):
+    return number % 2 == 0
+
+print(is_even(10))  # Output: True
+print(is_even(7))   # Output: False</pre>
+                    </div>
+                </details>
+
+                <h3>5. Find the Maximum of Two Numbers</h3>
+                <p>Create a function called `max_of_two` that takes two numbers as parameters and returns the larger of the two.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def max_of_two(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+print(max_of_two(10, 20))  # Output: 20</pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 We Codez</p>
+    </footer>
+</body>
+</html>
