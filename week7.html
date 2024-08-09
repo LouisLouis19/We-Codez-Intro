@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Programming - Python Data Structures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Introduction to Programming</h1>
+        <h2>Week 7: Python Data Structures - Lists and Tuples</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
+                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
+                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
+                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
+                    <li><a href="week5.html">Week 5 - Python Functions (Part 2)</a></li>
+                    <li><a href="week6.html">Week 6 - Python Functions (Part 3)</a></li>
+                    <li><a href="week7.html" class="active">Week 7 Overview</a></li>
+                    <li><a href="week8.html">Week 8 - Data Structures (Part 2)</a></li>
+                    <li><a href="week9.html">Week 9 - Data Structures (Part 3)</a></li>
+                    <li><a href="week10.html">Week 10 - Algorithms</a></li>
+                    <li><a href="week11.html">Week 11 - Algorithms (Part 2)</a></li>
+                    <li><a href="week12.html">Week 12 - Algorithms (Part 3)</a></li>
+                    <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
+                    <li><a href="conclusion.html">Conclusion</a></li>
+                    <li><a href="project.html">Project</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section class="overview">
+                <h2>Overview</h2>
+                <p>This week, we will dive into Python data structures, focusing on lists and tuples. These are fundamental tools for organizing and manipulating data in your programs.</p>
+            </section>
+
+            <section class="lists">
+                <h2>Python Lists</h2>
+                <p>A list is an ordered, mutable collection of items. This means that the elements in a list have a specific order, and you can modify the elements after the list is created.</p>
+                
+                <h3>Creating Lists and Accessing Elements</h3>
+                <p>Lists are created using square brackets <code>[]</code> and can contain elements of any data type.</p>
+                <pre class="code-block"># Creating a list
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # Accessing the first element</pre>
+
+                <h3>Basic Operations</h3>
+                <ul>
+                    <li><b>Indexing:</b> Access elements by their position in the list. Indexing starts from 0.</li>
+                    <li><b>Slicing:</b> Retrieve a portion of the list using a range of indices.</li>
+                    <li><b>Appending:</b> Add an element to the end of the list using <code>append()</code>.</li>
+                    <li><b>Inserting:</b> Insert an element at a specific position using <code>insert()</code>.</li>
+                    <li><b>Removing:</b> Remove an element by its value using <code>remove()</code> or by its position using <code>pop()</code>.</li>
+                </ul>
+                <pre class="code-block"># Appending and inserting elements
+fruits.append("orange")
+fruits.insert(1, "blueberry")
+
+# Removing elements
+fruits.remove("banana")
+popped_fruit = fruits.pop(2)  # Removes the element at index 2</pre>
+
+                <h3>List Methods</h3>
+                <p>Python provides several built-in methods for lists:</p>
+                <ul>
+                    <li><b>append():</b> Adds an element to the end of the list.</li>
+                    <li><b>extend():</b> Adds all elements from another list to the end.</li>
+                    <li><b>pop():</b> Removes and returns an element at a given index.</li>
+                    <li><b>remove():</b> Removes the first occurrence of a value.</li>
+                    <li><b>sort():</b> Sorts the list in ascending order.</li>
+                    <li><b>reverse():</b> Reverses the elements of the list in place.</li>
+                </ul>
+                <pre class="code-block"># Sorting and reversing the list
+fruits.sort()  # Sorts alphabetically
+fruits.reverse()  # Reverses the order of elements</pre>
+            </section>
+
+            <section class="tuples">
+                <h2>Python Tuples</h2>
+                <p>A tuple is an ordered, immutable collection of items. Unlike lists, tuples cannot be modified after they are created.</p>
+                
+                <h3>Creating Tuples and Accessing Elements</h3>
+                <p>Tuples are created using parentheses <code>()</code>. You can access elements in a tuple just like in a list.</p>
+                <pre class="code-block"># Creating a tuple
+colors = ("red", "green", "blue")
+print(colors[1])  # Accessing the second element</pre>
+
+                <h3>Differences Between Lists and Tuples</h3>
+                <ul>
+                    <li><b>Mutability:</b> Lists are mutable, meaning you can change, add, or remove elements. Tuples are immutable, so their content cannot be changed after creation.</li>
+                    <li><b>Use Cases:</b> Lists are used when you need a collection of items that can change over time. Tuples are used when the collection should remain constant.</li>
+                </ul>
+
+                <h3>Basic Tuple Operations</h3>
+                <ul>
+                    <li><b>Indexing:</b> Access elements by their position in the tuple.</li>
+                    <li><b>Slicing:</b> Retrieve a portion of the tuple using a range of indices.</li>
+                </ul>
+                <pre class="code-block"># Slicing a tuple
+color_slice = colors[0:2]  # ('red', 'green')</pre>
+            </section>
+
+            <section class="practice">
+                <h2>Practice</h2>
+                <h3>1. Create and Manipulate Lists</h3>
+                <p>Create a list of your favorite movies. Add two more movies to the list, remove one movie, and print the final list.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">movies = ["Inception", "The Matrix", "Interstellar"]
+movies.append("The Dark Knight")
+movies.append("Fight Club")
+movies.remove("The Matrix")
+print(movies)</pre>
+                    </div>
+                </details>
+
+                <h3>2. Practice Slicing and Indexing Lists</h3>
+                <p>Given a list of numbers, print the first three numbers, the last three numbers, and every second number in the list.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">numbers = [10, 20, 30, 40, 50, 60, 70, 80]
+print(numbers[:3])  # First three numbers
+print(numbers[-3:])  # Last three numbers
+print(numbers[::2])  # Every second number</pre>
+                    </div>
+                </details>
+
+                <h3>3. Create and Access Tuples</h3>
+                <p>Create a tuple with the names of the months in a year. Access the tuple to print the first and last month.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">months = ("January", "February", "March", "April", "May", "June", 
+          "July", "August", "September", "October", "November", "December")
+print(months[0])  # First month
+print(months[-1])  # Last month</pre>
+                    </div>
+                </details>
+
+                <h3>4. Understand Tuple Immutability</h3>
+                <p>Try modifying a tuple by changing one of its elements. Observe the error message and explain why it occurs.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">months = ("January", "February", "March")
+# Attempt to change an element (this will raise an error)
+# months[0] = "New January"
+
+# Output: TypeError: 'tuple' object does not support item assignment
+# Explanation: Tuples are immutable, meaning their elements cannot be changed after creation.</pre>
+                    </div>
+                </details>
+
+                <h3>5. Advanced List Manipulations</h3>
+                <p>Write a Python function that takes a list of numbers and returns a new list with each number squared, sorted in ascending order.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">def square_and_sort(numbers):
+    squared_numbers = [x**2 for x in numbers]
+    squared_numbers.sort()
+    return squared_numbers
+
+numbers = [4, 2, 8, 1]
+print(square_and_sort(numbers))  # [1, 4, 16, 64]</pre>
+                    </div>
+                </details>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 We Codez</p>
+    </footer>
+</body>
+</html>
