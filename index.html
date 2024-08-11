@@ -60,10 +60,20 @@
                     <li>Comments in Python start with a `#` symbol and are not executed.</li>
                     <li>Python files typically have a `.py` extension.</li>
                 </ul>
-                <p>Example of a simple Python script:</p>
+                <br>
+                <p>Example of a simple Python code:</p>
                 <pre class="code-block"># This is a comment
 name = "Alice"
 print("Hello, " + name)</pre>
+            </section>
+
+            <section class="variables">
+                <h2>Variables</h2>
+                <p>Variables are like containers for storing data values. You can use them to hold numbers, text, and other types of data.</p>
+                <p>Example of variable declaration and usage:</p>
+                <pre class="code-block">myName = "Louis"
+print("I am " + myName)</pre>
+                <p>Here, `myAge` is a variable that stores the number `22`. The `print` function is used to display the value of `myAge` along with some text.</p>
             </section>
 
             <section class="python-data-types">
@@ -77,6 +87,7 @@ print("Hello, " + name)</pre>
                     <li><b>List:</b> Ordered sequences of items, e.g., `[1, 2, 3]`</li>
                     <li><b>Dictionary:</b> Key-value pairs, e.g., `{"name": "Alice", "age": 25}`</li>
                 </ul>
+                <br>
                 <p>Examples:</p>
                 <pre class="code-block"># Integer
 age = 22
@@ -97,15 +108,6 @@ fruits = ["apple", "banana", "cherry"]
 person = {"name": "Alice", "age": 25}</pre>
             </section>
 
-            <section class="variables">
-                <h2>Variables</h2>
-                <p>Variables are like containers for storing data values. You can use them to hold numbers, text, and other types of data.</p>
-                <p>Example of variable declaration and usage:</p>
-                <pre class="code-block">myAge = 22
-print("I am " + str(myAge) + " years old.")</pre>
-                <p>Here, `myAge` is a variable that stores the number `22`. The `print` function is used to display the value of `myAge` along with some text.</p>
-            </section>
-
             <section class="arithmetic-operations">
                 <h2>Arithmetic Operators</h2>
                 <p>Arithmetic operations allow you to perform calculations using numbers. Python supports basic arithmetic operators:</p>
@@ -116,8 +118,9 @@ print("I am " + str(myAge) + " years old.")</pre>
                     <li><b>Division:</b> `/`</li>
                     <li><b>Floor Division:</b> `//`</li>
                     <li><b>Exponentiation:</b> `**`</li>
-                    <li><b>Modulus:</b> `%` (remainder after division)</li>
+                    <li><b>Modulus:</b> `%`</li>
                 </ul>
+                <br>
                 <p>Examples:</p>
                 <pre class="code-block"># Addition
 sum = 5 + 3
@@ -143,7 +146,7 @@ print(floored_result)</pre>
 power = 2 ** 3
 print(power)</pre>
 
-                <pre class="code-block"># Modulus
+                <pre class="code-block"># Modulus: Remainder after Division
 remainder = 10 % 3
 print(remainder)</pre>
             </section>
@@ -159,6 +162,7 @@ print(remainder)</pre>
                     <li><b>Greater Than or Equal To:</b> `>=`</li>
                     <li><b>Less Than or Equal To:</b> `<=`</li>
                 </ul>
+                <br>
                 <p>Examples:</p>
                 <pre class="code-block"># Equal To
 result = 5 == 5  # True
@@ -181,21 +185,37 @@ result = 7 <= 5  # False
 print(result)</pre>
             </section>
 
+            <section class="user-input">
+                <h2>Reading Input from Users</h2>
+                <p>In Python, you can use the <code>input()</code> function to read input from users. This function displays a prompt and waits for the user to enter some text. The input is returned as a string.</p>
+                
+                <h3>Basic Usage</h3>
+                <p>To read input from the user, use the <code>input()</code> function and optionally provide a prompt message. Here is a basic example:</p>
+                <pre class="code-block">user_name = input("Enter your name: ")
+print("Hello, " + user_name + "!")</pre>
+            
+                <h3>Reading Numeric Input</h3>
+                <p>If you need to read numeric input, you'll need to convert the input from a string to a number using <code>int()</code> for integers or <code>float()</code> for floating-point numbers. Here is an example:</p>
+                <pre class="code-block">age = int(input("Enter your age: "))
+print("You are " + str(age) + " years old.")</pre>
+            </section>
+
             <section class="task">
                 <h2>Practice</h2>
                 <p>Try out these exercises to reinforce your understanding:</p>
+                
                 <h3>1. Declare a Variable</h3>
-                <p>Create a variable called `myName` and assign it your name as a string. Print the value.</p>
+                <p>Create a variable called <code>myAge</code> and assign it your age as a number. Print the value.</p>
                 <details>
                     <summary>Solution</summary>
                     <div>
-                        <pre class="code-block">myName = "Louis"
-print(myName)</pre>
+                        <pre class="code-block">myAge = 22
+print(myAge)</pre>
                     </div>
                 </details>
-
+            
                 <h3>2. Arithmetic Operations</h3>
-                <p>Perform a multiplication operation and store the result in a variable called `product`. Print the value.</p>
+                <p>Perform a multiplication operation and store the result in a variable called <code>product</code>. Print the value.</p>
                 <details>
                     <summary>Solution</summary>
                     <div>
@@ -203,7 +223,7 @@ print(myName)</pre>
 print(product)</pre>
                     </div>
                 </details>
-
+            
                 <h3>3. Comparison Operations</h3>
                 <p>Compare two numbers to check if one is greater than the other and print the result.</p>
                 <details>
@@ -215,7 +235,36 @@ is_greater = a > b
 print(is_greater)</pre>
                     </div>
                 </details>
+            
+                <h3>4. Discriminant Calculation</h3>
+                <p>Write a program to calculate the discriminant of a quadratic equation <code>ax^2 + bx + c = 0</code>. Use the formula: <code>Discriminant = b^2 - 4ac</code>. Print the value of the discriminant.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">a = 1
+b = -3
+c = 2
+discriminant = b ** 2 - 4 * a * c
+print(discriminant)</pre>
+                    </div>
+                </details>
+            
+                <h3>5. BMI Calculator</h3>
+                <p>Create a program to calculate the Body Mass Index (BMI) using the formula: <code>BMI = weight / height^2</code>, where <code>weight</code> is in kilograms and <code>height</code> is in meters. Print the BMI value.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">weight = 70
+height = 1.75
+bmi = weight / (height ** 2)
+print(bmi)</pre>
+                    </div>
+                </details>
+            
             </section>
+
+            <p><a href="assignments/week1-practice.html">Practice Exercises</a></p>
+            
         </main>
     </div>
     <footer>

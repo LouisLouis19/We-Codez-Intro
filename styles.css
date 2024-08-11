@@ -8,6 +8,10 @@ body {
     background-color: #f4f4f4;
 }
 
+.assignments {
+    margin: 20px;
+}
+
 header {
     background: #333;
     color: #fff;
