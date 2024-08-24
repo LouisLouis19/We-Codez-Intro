@@ -19,7 +19,7 @@
                     <li><a href="index.html">Week 1 - Programming Basics</a></li>
                     <li><a href="week2.html">Week 2 - If/Else Statements & For Loops</a></li>
                     <li><a href="week3.html" class="active">Week 3 Overview</a></li>
-                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
+                    <!-- <li><a href="week4.html">Week 4 - Python Functions </a></li>
                     <li><a href="week5.html">Week 5 - Python Functions (Part 2)</a></li>
                     <li><a href="week6.html">Week 6 - Python Functions (Part 3)</a></li>
                     <li><a href="week7.html">Week 7 - Data Structures</a></li>
@@ -30,7 +30,7 @@
                     <li><a href="week12.html">Week 12 - Algorithms (Part 2)</a></li>
                     <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
                     <li><a href="conclusion.html">Conclusion</a></li>
-                    <li><a href="project.html">Project</a></li>
+                    <li><a href="project.html">Project</a></li> -->
                 </ul>
             </nav>
         </aside>
@@ -59,18 +59,59 @@ while counter < 5:
 
             <section class="infinite-loops">
                 <h2>Be Careful with Infinite Loops</h2>
-                <p>While loops are powerful, but you must ensure that the loop's condition eventually becomes false. If it never does, the loop will continue indefinitely, causing an "infinite loop". This can crash your program or cause it to become unresponsive.</p>
+                <p>While loops are powerful tools that allow you to repeat a block of code as long as a condition is true. However, if that condition never becomes false, the loop will continue indefinitely. This is known as an "infinite loop." Infinite loops can cause your program to freeze, crash, or become unresponsive.</p>
+                
                 <p>Example of an infinite loop:</p>
                 <pre class="code-block">while True:
-    print("This loop will run forever!")</pre>
-
-                <p>To prevent infinite loops, always ensure that the loop's condition will eventually become false, either by changing a variable within the loop or by using a break statement.</p>
+print("This loop will run forever!")</pre>
+                
+                <p>In this case, because the condition <code>True</code> never changes to <code>False</code>, the loop runs forever. If you're not careful, infinite loops like this can lead to memory exhaustion or make your program hang.</p>
+            
+                <h3>How to Avoid Infinite Loops</h3>
+                <p>To prevent infinite loops, you need to ensure that the loop's condition will eventually become false. This can be achieved in a few ways:</p>
+                <ul>
+                    <li>Modify a variable that affects the loop's condition inside the loop.</li>
+                    <li>Use logical conditions that will eventually stop being true.</li>
+                    <li>Use a <code>break</code> statement to forcibly exit the loop when a certain condition is met.</li>
+                </ul>
+            
+                <p>Example of a correct loop with a variable that affects the loop's condition:</p>
+                <pre class="code-block">counter = 0
+while counter < 5:
+    print("Counter is", counter)
+    counter += 1  # The condition will eventually become False</pre>
+            
+                <h3>The <code>break</code> Statement</h3>
+                <p>The <code>break</code> statement allows you to exit a loop prematurely, even if the loop’s condition is still true. This is particularly useful for situations where you are waiting for a specific condition to be met, or to prevent an infinite loop from continuing under certain circumstances.</p>
+                
+                <p>Example of using the <code>break</code> statement to prevent an infinite loop:</p>
+                <pre class="code-block">while True:
+user_input = input("Type 'exit' to stop the loop: ")
+if user_input == 'exit':
+    print("Exiting the loop.")
+    break  # Exit the loop if the user types 'exit'
+else:
+    print("The loop continues...")</pre>
+            
+                <p>In this case, the loop will only continue as long as the user doesn’t type "exit". When the user types "exit", the <code>break</code> statement stops the loop, even though the condition <code>True</code> would normally keep it going forever.</p>
+            
+                <h3>Tips for Preventing Infinite Loops</h3>
+                <p>Here are a few best practices to avoid infinite loops in your programs:</p>
+                <ul>
+                    <li>Make sure the loop's condition is properly defined and will eventually be met.</li>
+                    <li>Regularly check the loop's condition to ensure it can be changed by something inside the loop.</li>
+                    <li>If you’re not sure about a loop’s behavior, use print statements to debug and see the loop’s progress.</li>
+                    <li>Consider using the <code>break</code> statement if you need to exit the loop under specific conditions.</li>
+                </ul>
+            
+                <p>Remember, careful planning of your loop's logic will help you avoid infinite loops and keep your programs running smoothly.</p>
             </section>
+            
 
             <section class="practice">
                 <h2>Practice Problems</h2>
 
-                <h3>1. For Loop: Sum of Numbers</h3>
+                <h3>Sum of Numbers</h3>
                 <p>Write a `for` loop that calculates the sum of all numbers from 1 to 100.</p>
                 <details>
                     <summary>Solution</summary>
@@ -84,7 +125,7 @@ print("Sum of numbers from 1 to 100:", total_sum)</pre>
                     </div>
                 </details>
 
-                <h3>2. While Loop: Guessing Game</h3>
+                <h3>Guessing Game</h3>
                 <p>Write a program that asks the user to guess a number between 1 and 10. The program should continue to ask until the user guesses the correct number (e.g., 7).</p>
                 <details>
                     <summary>Solution</summary>
@@ -101,21 +142,7 @@ while guess != correct_number:
                     </div>
                 </details>
 
-                <h3>3. If/Else: Even or Odd</h3>
-                <p>Write a program that checks whether a given number is even or odd using an `if/else` statement.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">number = int(input("Enter a number: "))
-
-if number % 2 == 0:
-    print("The number is even.")
-else:
-    print("The number is odd.")</pre>
-                    </div>
-                </details>
-
-                <h3>4. While Loop: Factorial Calculation</h3>
+                <h3>While Loop Factorial Calculation</h3>
                 <p>Write a `while` loop that calculates the factorial of a given number.</p>
                 <details>
                     <summary>Solution</summary>
@@ -131,7 +158,7 @@ print("Factorial:", factorial)</pre>
                     </div>
                 </details>
 
-                <h3>5. For Loop with If/Else: FizzBuzz</h3>
+                <h3>FizzBuzz</h3>
                 <p>Write a program that prints the numbers from 1 to 50. For multiples of 3, print "Fizz" instead of the number, and for multiples of 5, print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".</p>
                 <details>
                     <summary>Solution</summary>
@@ -148,7 +175,7 @@ print("Factorial:", factorial)</pre>
                     </div>
                 </details>
 
-                <h3>6. While Loop: Reverse a String</h3>
+                <h3>Reverse a String</h3>
                 <p>Write a `while` loop that reverses a given string.</p>
                 <details>
                     <summary>Solution</summary>
@@ -165,40 +192,7 @@ print("Reversed string:", reversed_string)</pre>
                     </div>
                 </details>
 
-                <h3>7. If/Else: Age Classification</h3>
-                <p>Write a program that categorizes a person's age into "Child," "Teenager," "Adult," or "Senior" based on user input.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">age = int(input("Enter your age: "))
-
-if age < 13:
-    print("You are a Child.")
-elif 13 <= age < 20:
-    print("You are a Teenager.")
-elif 20 <= age < 65:
-    print("You are an Adult.")
-else:
-    print("You are a Senior.")</pre>
-                    </div>
-                </details>
-
-                <h3>8. For Loop: Sum of Even Numbers</h3>
-                <p>Write a `for` loop that calculates the sum of all even numbers from 1 to 50.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">total_sum = 0
-
-for number in range(1, 51):
-    if number % 2 == 0:
-        total_sum += number
-
-print("Sum of even numbers from 1 to 50:", total_sum)</pre>
-                    </div>
-                </details>
-
-                <h3>9. While Loop: Countdown Timer</h3>
+                <h3>Countdown Timer</h3>
                 <p>Write a `while` loop that counts down from a given number to zero and prints "Liftoff!" when finished.</p>
                 <details>
                     <summary>Solution</summary>
@@ -213,15 +207,115 @@ print("Liftoff!")</pre>
                     </div>
                 </details>
 
-                <h3>10. For Loop: Multiplication Table</h3>
-                <p>Write a `for` loop that prints the multiplication table of a given number (from 1 to 10).</p>
+                <h3>Number Sequence Checker</h3>
+                <p>Write a program that continuously takes an integer input from the user until the user inputs a number that is less than the previous number entered. If the inputted number is greater than or equal to the previous one, ask for the next number.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">previous_number = int(input("Enter a number: "))
+
+while True:
+    current_number = int(input("Enter the next number: "))
+    if current_number < previous_number:
+        print("Sequence interrupted. Exiting...")
+        break
+    else:
+        previous_number = current_number</pre>
+                    </div>
+                </details>
+
+                <h3>Divisibility by Prime Numbers</h3>
+                <p>Write a program that prints numbers from 1 to 100, but for numbers divisible by 2, 3, or 5, print "Divisible by a Prime". For other numbers, just print the number itself.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">for i in range(1, 101):
+    if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
+        print("Divisible by a Prime")
+    else:
+        print(i)</pre>
+                    </div>
+                </details>
+
+                <h3>Collatz Conjecture</h3>
+                <p>Implement the Collatz Conjecture. Given a number `n`, if it's even, divide it by 2, and if it's odd, multiply it by 3 and add 1. Repeat this process until `n` becomes 1.</p>
                 <details>
                     <summary>Solution</summary>
                     <div>
                         <pre class="code-block">n = int(input("Enter a number: "))
 
-for i in range(1, 11):
-    print(n, "x", i, "=", n * i)</pre>
+while n != 1:
+    print(n, end=" ")
+    if n % 2 == 0:
+        n = n // 2
+    else:
+        n = n * 3 + 1
+
+print(n)</pre>
+                    </div>
+                </details>
+
+                <h3>Skipping Multiples</h3>
+                <p>Write a program that prints numbers from 1 to 50 but skips the numbers that are divisible by both 4 and 6.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">for i in range(1, 51):
+    if i % 4 == 0 and i % 6 == 0:
+        continue
+    print(i)</pre>
+                    </div>
+                </details>
+
+                <h3>Pyramid Pattern</h3>
+                <p>Write a program that prints the following pattern for a given number `n`:
+                <br>For n = 4:
+                <br>1
+                <br>1 2
+                <br>1 2 3
+                <br>1 2 3 4</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">n = int(input("Enter the height of the pyramid: "))
+
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()</pre>
+                    </div>
+                </details>
+
+                <h3>Cumulative Sum Until Negative</h3>
+                <p>Write a program that keeps asking the user for a number and adds it to a cumulative sum. Stop the program if the user enters a negative number, and print the final cumulative sum.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">total_sum = 0
+
+while True:
+    num = int(input("Enter a number: "))
+    if num < 0:
+        break
+    total_sum += num
+
+print("Cumulative sum:", total_sum)</pre>
+                    </div>
+                </details>
+
+                <h3>Digit Sum of a Number</h3>
+                <p>Write a program that takes an integer input and calculates the sum of its digits using a `while` loop.</p>
+                <details>
+                    <summary>Solution</summary>
+                    <div>
+                        <pre class="code-block">number = int(input("Enter a number: "))
+digit_sum = 0
+
+while number > 0:
+    digit_sum += number % 10
+    number = number // 10
+
+print("Sum of digits:", digit_sum)</pre>
                     </div>
                 </details>
             </section>
