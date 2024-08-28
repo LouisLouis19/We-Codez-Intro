@@ -1,173 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to Programming - Function Parameters and Scope</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Introduction to Programming</h1>
-        <h2>Week 5: Function Parameters, Scope, and Built-in Functions</h2>
+      <h1>Introduction to Programming</h1>
+      <h2>Week 5: Function Parameters, Scope, and Built-in Functions</h2>
     </header>
 
     <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
-                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
-                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
-                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
-                    <li><a href="week5.html" class="active">Week 5 Overview</a></li>
-                    <li><a href="week6.html">Week 6 - Python Functions (Part 3)</a></li>
-                    <li><a href="week7.html">Week 7 - Data Structures</a></li>
-                    <li><a href="week8.html">Week 8 - Data Structures (Part 2)</a></li>
-                    <li><a href="week9.html">Week 9 - Data Structures (Part 3)</a></li>
-                    <li><a href="week10.html">Week 10 - Project</a></li>
-                    <li><a href="week11.html">Week 11 - Algorithms</a></li>
-                    <li><a href="week12.html">Week 12 - Algorithms (Part 2)</a></li>
-                    <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
-                    <li><a href="conclusion.html">Conclusion</a></li>
-                    <li><a href="project.html">Project</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <section class="overview">
-                <h2>Overview</h2>
-                <p>This week, we dive deeper into Python functions by learning about function parameters, scope, and using built-in functions. Understanding these concepts is essential for writing clean, reusable code.</p>
-            </section>
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Programming Basics</a></li>
+            <li><a href="week2.html">Python Control Flow</a></li>
+            <li><a href="week3.html">Python Control Flow (Part 2)</a></li>
+            <li><a href="week4.html">Python Functions </a></li>
+            <li>
+              <a href="week5.html" class="active">Python Functions (Part 2)</a>
+            </li>
+            <!-- <li><a href="week6.html">Python Functions (Part 3)</a></li>
+            <li><a href="week7.html">Data Structures</a></li>
+            <li><a href="week8.html">Data Structures (Part 2)</a></li>
+            <li><a href="week9.html">Data Structures (Part 3)</a></li>
+            <li><a href="week10.html">Project</a></li>
+            <li><a href="week11.html">Algorithms</a></li>
+            <li><a href="week12.html">Algorithms (Part 2)</a></li>
+            <li><a href="week13.html">Debugging and Problem Solving</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="project.html">Project</a></li> -->
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <section class="overview">
+          <h2>Overview</h2>
+          <p>
+            This week, we dive deeper into Python functions by learning about
+            function parameters, scope, and using built-in functions.
+            Understanding these concepts is essential for writing clean,
+            reusable code.
+          </p>
+        </section>
 
-            <section class="function-parameters">
-                <h2>Function Parameters</h2>
-                <p>Function parameters allow you to pass data into a function, making it more flexible and reusable. You define parameters in the function's definition and pass arguments to them when calling the function.</p>
-                <p>Example:</p>
-                <pre class="code-block">def greet(name):
+        <section class="function-parameters">
+          <h2>Function Parameters</h2>
+          <p>
+            Function parameters allow you to pass data into a function, making
+            it more flexible and reusable. You define parameters in the
+            function's definition and pass arguments to them when calling the
+            function.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+def greet(name):
     print("Hello, " + name)
 
-greet("Alice")</pre>
-                <p>Here, <code>name</code> is a parameter, and <code>"Alice"</code> is the argument passed to it when the function is called.</p>
+greet("Alice")</pre
+          >
+          <p>
+            Here, <code>name</code> is a parameter, and <code>"Alice"</code> is
+            the argument passed to it when the function is called.
+          </p>
 
-                <h3>Default Parameters</h3>
-                <p>In Python, you can assign default values to parameters. This means that if an argument is not provided for that parameter when the function is called, the default value will be used.</p>
-                <p>Example:</p>
-                <pre class="code-block">def greet(name, greeting="Hello"):
+          <h3>Default Parameters</h3>
+          <p>
+            In Python, you can assign default values to parameters. This means
+            that if an argument is not provided for that parameter when the
+            function is called, the default value will be used.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+def greet(name, greeting="Hello"):
     print(greeting + ", " + name)
 
 greet("Alice")
-greet("Bob", "Hi")</pre>
-                <p>In the above example, <code>greeting</code> has a default value of <code>"Hello"</code>. When <code>greet("Alice")</code> is called, the default greeting is used. When <code>greet("Bob", "Hi")</code> is called, the default greeting is overridden by <code>"Hi"</code>.</p>
-            </section>
+greet("Bob", "Hi")</pre
+          >
+          <p>
+            In the above example, <code>greeting</code> has a default value of
+            <code>"Hello"</code>. When <code>greet("Alice")</code> is called,
+            the default greeting is used. When
+            <code>greet("Bob", "Hi")</code> is called, the default greeting is
+            overridden by <code>"Hi"</code>.
+          </p>
 
-            <section class="scope">
-                <h2>Scope</h2>
-                <p>Scope refers to the visibility of variables within different parts of a program. In Python, variables defined inside a function are local to that function and cannot be accessed outside of it.</p>
-                <p>Example:</p>
-                <pre class="code-block">def my_function():
+          <h4>Using Multiple Default Parameters</h4>
+          <p>
+            You can assign default values to multiple parameters in a function.
+            However, when you do so, all parameters with default values must
+            come after the parameters that do not have default values in the
+            function definition.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+def describe_pet(pet_name, animal_type="dog", sound="woof"):
+    print("I have a " + animal_type + " named " + pet_name + ".")
+    print("It says " + sound + "!")
+
+describe_pet("Buddy")
+describe_pet("Milo", "cat", "meow")
+describe_pet("Charlie", sound="chirp")</pre
+          >
+          <p>
+            In this example, <code>animal_type</code> and
+            <code>sound</code> have default values. When
+            <code>describe_pet("Buddy")</code> is called, the default values are
+            used. When <code>describe_pet("Milo", "cat", "meow")</code> is
+            called, both defaults are overridden. When
+            <code>describe_pet("Charlie", sound="chirp")</code> is called, only
+            the <code>sound</code> parameter is overridden, while the default
+            <code>animal_type</code> is used.
+          </p>
+
+          <h4>Importance of Default Parameters</h4>
+          <p>
+            Default parameters are useful when you want to provide flexible
+            function interfaces, allowing users to call the function with fewer
+            arguments while still having the option to override defaults if
+            needed. This can make your functions more versatile and easier to
+            use in different scenarios.
+          </p>
+
+          <h4>Considerations</h4>
+          <p>
+            - Default parameters are evaluated only once when the function is
+            defined, not each time the function is called. This is particularly
+            important when using mutable objects (like lists or dictionaries) as
+            default values.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+def append_to_list(value, my_list=[]):
+    my_list.append(value)
+    return my_list
+
+print(append_to_list(1))
+print(append_to_list(2))
+print(append_to_list(3))</pre
+          >
+          <p>
+            The above function might not behave as expected because the default
+            list is shared across all calls to the function, leading to
+            cumulative changes.
+          </p>
+          <p>Output:</p>
+          <pre class="code-block">
+[1]
+[1, 2]
+[1, 2, 3]</pre
+          >
+          <p>
+            To avoid this, use <code>None</code> as the default value and
+            initialize the list inside the function:
+          </p>
+          <pre class="code-block">
+def append_to_list(value, my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(value)
+    return my_list
+
+print(append_to_list(1))
+print(append_to_list(2))
+print(append_to_list(3))</pre
+          >
+          <p>Output:</p>
+          <pre class="code-block">
+[1]
+[2]
+[3]</pre
+          >
+          <p>
+            Now, each call to the function creates a new list, avoiding
+            unintended side effects.
+          </p>
+        </section>
+
+        <section class="scope">
+          <h2>Scope</h2>
+          <p>
+            Scope refers to the visibility and lifetime of variables within
+            different parts of a program. In Python, variables can have
+            different levels of scope:
+          </p>
+          <ul>
+            <li>
+              <strong>Local Scope:</strong> Variables defined inside a function,
+              which are accessible only within that function.
+            </li>
+            <li>
+              <strong>Global Scope:</strong> Variables defined outside any
+              function, which are accessible from any part of the program.
+            </li>
+          </ul>
+          <p>
+            In general, variables created inside a function are local to that
+            function and cannot be accessed outside of it. This prevents other
+            parts of the program from unintentionally modifying those variables.
+          </p>
+
+          <h3>Local Scope</h3>
+          <p>Example:</p>
+          <pre class="code-block">
+def my_function():
     x = 10  # Local variable
+    print(x)  # Accessible inside the function
+
+my_function()
+print(x)  # This will cause an error because x is not accessible here</pre
+          >
+          <p>
+            In the above example, the variable <code>x</code> is local to
+            <code>my_function()</code> and cannot be used outside of it.
+            Attempting to access it outside the function will cause a
+            <code>NameError</code>.
+          </p>
+
+          <h3>Global Scope</h3>
+          <p>
+            Variables defined outside of a function have global scope and can be
+            accessed from anywhere within the program.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+x = 20  # Global variable
+
+def my_function():
+    print(x)  # Accessing the global variable
+
+my_function()
+print(x)  # Still accessible here</pre
+          >
+          <p>
+            In this case, <code>x</code> is a global variable and can be
+            accessed both inside and outside <code>my_function()</code>.
+          </p>
+
+          <h3>Modifying Global Variables</h3>
+          <p>
+            If you want to modify a global variable inside a function, you need
+            to use the <code>global</code> keyword. Without it, Python will
+            treat any variable assignment inside the function as a new local
+            variable.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+x = 20  # Global variable
+
+def my_function():
+    global x
+    x = 30  # Modify the global variable
     print(x)
 
 my_function()
-print(x)  # This will cause an error because x is not accessible here</pre>
-                <p>In the above example, the variable <code>x</code> is local to <code>my_function()</code> and cannot be used outside of it.</p>
-            </section>
+print(x)  # Global variable x has been changed</pre
+          >
+          <p>
+            By using the <code>global</code> keyword, you tell Python to modify
+            the global variable instead of creating a local one.
+          </p>
 
-            <section class="builtin-functions">
-                <h2>Using Built-in Python Functions</h2>
-                <p>Python comes with a number of built-in functions that you can use to perform common tasks. These functions are always available and do not require any additional code to use.</p>
-                <p>Examples of built-in functions:</p>
-                <ul>
-                    <li><b>len()</b>: Returns the length of an object.</li>
-                    <li><b>max()</b>: Returns the largest item in an iterable.</li>
-                    <li><b>min()</b>: Returns the smallest item in an iterable.</li>
-                    <li><b>sum()</b>: Sums the items of an iterable.</li>
-                    <li><b>type()</b>: Returns the type of an object.</li>
-                </ul>
-                <p>Example:</p>
-                <pre class="code-block">numbers = [1, 2, 3, 4, 5]
-print("Length:", len(numbers))
-print("Max:", max(numbers))
-print("Min:", min(numbers))
-print("Sum:", sum(numbers))
-print("Type:", type(numbers))</pre>
-            </section>
+          <h3>Summary</h3>
+          <p>
+            Understanding scope in Python is crucial for managing variable
+            visibility and avoiding conflicts or unintended side effects in your
+            programs. Local, global, and enclosing (with <code>nonlocal</code>)
+            scopes are important concepts when working with functions and nested
+            functions.
+          </p>
+        </section>
 
-            <section class="practice">
-                <h2>Practice</h2>
-                <h3>1. Function with Parameters</h3>
-                <p>Create a function called <code>add_numbers</code> that takes two parameters, adds them together, and returns the result. Test the function by passing different arguments.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def add_numbers(a, b):
-    return a + b
+        <section class="builtin-functions">
+          <h2>Using Built-in Python Functions</h2>
+          <p>
+            Python comes with a wide range of built-in functions that perform
+            common tasks, simplifying code and making it more readable. These
+            functions are always available without the need to import any
+            modules, meaning you can start using them right away.
+          </p>
 
-result = add_numbers(5, 3)
-print(result)</pre>
-                    </div>
-                </details>
+          <h3>Common Built-in Functions</h3>
+          <p>Here are some commonly used built-in Python functions:</p>
+          <ul>
+            <li>
+              <b>len()</b>: Returns the length (number of items) of an object
+              (e.g., list, tuple, string).
+            </li>
+            <li>
+              <b>max()</b>: Returns the largest item in an iterable or the
+              largest of multiple arguments.
+            </li>
+            <li>
+              <b>min()</b>: Returns the smallest item in an iterable or the
+              smallest of multiple arguments.
+            </li>
+            <li><b>sum()</b>: Returns the sum of all items in an iterable.</li>
+            <li>
+              <b>type()</b>: Returns the type of an object (e.g., list, int,
+              str).
+            </li>
+            <li><b>abs()</b>: Returns the absolute value of a number.</li>
+            <li>
+              <b>round()</b>: Rounds a floating-point number to a specified
+              number of decimal places.
+            </li>
+            <li>
+              <b>sorted()</b>: Returns a new sorted list from the items in an
+              iterable.
+            </li>
+          </ul>
 
-                <h3>2. Function Scope</h3>
-                <p>Write a function <code>outer_function</code> that defines a local variable <code>x</code> and calls another function <code>inner_function</code> that tries to print <code>x</code>. See what happens.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def outer_function():
-    x = 10
-    
-    def inner_function():
-        print(x)
-    
-    inner_function()
+          <h3>Example Usage</h3>
+          <p>Example of using some common built-in functions:</p>
+          <pre class="code-block">
+numbers = [1, 2, 3, 4, 5]
+print("Length:", len(numbers))  # Output: 5
+print("Max:", max(numbers))     # Output: 5
+print("Min:", min(numbers))     # Output: 1
+print("Sum:", sum(numbers))     # Output: 15
+print("Type:", type(numbers))   # Output: <class 'list'>
 
-outer_function()</pre>
-                    </div>
-                </details>
+# Using other built-in functions
+value = -42
+print("Absolute Value:", abs(value))   # Output: 42
+float_number = 7.56789
+print("Rounded Value:", round(float_number, 2))  # Output: 7.57
+print("Sorted List:", sorted([4, 2, 3, 1, 5]))   # Output: [1, 2, 3, 4, 5]</pre
+          >
 
-                <h3>3. Built-in Functions</h3>
-                <p>Use the built-in <code>max()</code> and <code>min()</code> functions to find the largest and smallest numbers in a list. Create a list with at least 5 numbers.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">numbers = [5, 10, 3, 8, 2]
-print("Max:", max(numbers))
-print("Min:", min(numbers))</pre>
-                    </div>
-                </details>
+          <h3>Function Details</h3>
+          <p>Here are some additional details on a few of these functions:</p>
+          <ul>
+            <li>
+              <b>abs()</b>: This function returns the absolute value of a
+              number, which is the number's distance from zero on the number
+              line, without considering its sign (positive or negative).
+              <pre class="code-block">
+print(abs(-10))  # Output: 10
+print(abs(10))   # Output: 10</pre
+              >
+            </li>
+            <li>
+              <b>round()</b>: This function rounds a floating-point number to a
+              specified number of decimal places. If no number of decimal places
+              is provided, it rounds to the nearest integer.
+              <pre class="code-block">
+print(round(4.567))       # Output: 5
+print(round(4.567, 2))    # Output: 4.57
+print(round(4.567, 1))    # Output: 4.6</pre
+              >
+            </li>
+            <li>
+              <b>sorted()</b>: This function returns a new sorted list from an
+              iterable, such as a list or tuple. It does not modify the original
+              iterable.
+              <pre class="code-block">
+unsorted_list = [3, 1, 4, 1, 5, 9]
+sorted_list = sorted(unsorted_list)
+print("Unsorted:", unsorted_list)  # Output: [3, 1, 4, 1, 5, 9]
+print("Sorted:", sorted_list)      # Output: [1, 1, 3, 4, 5, 9]</pre
+              >
+            </li>
+          </ul>
 
-                <h3>4. Modify a Function to Use Parameters</h3>
-                <p>Modify the <code>greet()</code> function so that it takes two parameters: <code>name</code> and <code>age</code>. The function should print a message that includes both the name and age.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def greet(name, age):
-    print("Hello, " + name + ". You are " + str(age) + " years old.")
+          <h3>Exploring More Built-in Functions</h3>
+          <p>
+            Python provides over 60 built-in functions, and they can greatly
+            enhance your programming efficiency. Some other commonly used
+            functions include:
+          </p>
+          <ul>
+            <li><b>input()</b>: Reads a string from standard input.</li>
+            <li>
+              <b>int()</b>, <b>float()</b>, <b>str()</b>: Convert between
+              different data types.
+            </li>
+            <li><b>open()</b>: Opens a file and returns a file object.</li>
+            <li>
+              <b>help()</b>: Provides help on Python objects and functions.
+            </li>
+          </ul>
+          <p>
+            For a full list of built-in functions, you can check Python's
+            official documentation or use the <code>help()</code> function
+            directly in your Python environment.
+          </p>
+        </section>
 
-greet("Alice", 25)</pre>
-                    </div>
-                </details>
+        <section class="practice">
+          <h2>Practice</h2>
 
-                <h3>5. Using Scope</h3>
-                <p>Create a function <code>calculate_area</code> that calculates the area of a rectangle. Define variables for length and width inside the function and return the area. Ensure that these variables are not accessible outside the function.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def calculate_area():
-    length = 5
-    width = 3
-    return length * width
+          <h3>Loop with Default Parameters</h3>
+          <p>
+            Create a function <code>repeat_message</code> that takes a message
+            and a number of repetitions as parameters, with a default value of 3
+            for repetitions. The function should print the message only on
+            even-numbered repetitions (e.g., 2nd, 4th, etc.).
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def repeat_message(message, repetitions=3):
+    for i in range(1, repetitions + 1):
+        if i % 2 == 0:
+            print(f"Repetition {i}: {message}")
 
-area = calculate_area()
-print(area)</pre>
-                    </div>
-                </details>
-            </section>
-        </main>
+repeat_message("Hello!")  # Will print only on 2nd and 4th repetitions
+repeat_message("Python is fun", 5)</pre
+              >
+            </div>
+          </details>
+
+          <h3>Cumulative Product of Odd Numbers</h3>
+          <p>
+            Write a function <code>cumulative_product</code> that takes a list
+            of numbers and returns the cumulative product of only the odd
+            numbers. Ignore even numbers during the calculation.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def cumulative_product(numbers):
+    product = 1
+    for num in numbers:
+        if num % 2 != 0:
+            product *= num
+    return product
+
+numbers = [1, 2, 3, 4, 5]
+print(cumulative_product(numbers))  # Output: 15</pre
+              >
+            </div>
+          </details>
+
+          <h3>Loop with Conditional Logic and Default Parameters</h3>
+          <p>
+            Create a function <code>find_largest</code> that accepts a list of
+            numbers and an optional threshold (default value of 10). The
+            function should return the largest number in the list that is less
+            than the threshold.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def find_largest(numbers, threshold=10):
+    largest = None
+    for num in numbers:
+        if num < threshold:
+            if largest is None or num > largest:
+                largest = num
+    return largest
+
+numbers = [12, 7, 5, 19, 2]
+print(find_largest(numbers))  # Output: 7</pre
+              >
+            </div>
+          </details>
+
+          <h3>Find the Longest Increasing Sequence</h3>
+          <p>
+            Write a function <code>longest_increasing_sequence</code> that takes
+            a list of numbers and returns the length of the longest increasing
+            sequence in the list. The sequence consists of consecutive numbers
+            that are in increasing order.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def longest_increasing_sequence(numbers):
+    max_length = 0
+    current_length = 1
+    for i in range(1, len(numbers)):
+        if numbers[i] > numbers[i - 1]:
+            current_length += 1
+            max_length = max(max_length, current_length)
+        else:
+            current_length = 1
+    return max(max_length, current_length)
+
+numbers = [1, 2, 3, 1, 2, 3, 4, 1]
+print(longest_increasing_sequence(numbers))  # Output: 4</pre
+              >
+            </div>
+          </details>
+
+          <h3>Loop with Built-in Functions and Reverse Order</h3>
+          <p>
+            Create a function <code>reverse_and_sum</code> that takes a list of
+            numbers, reverses the order of the list, and then sums the reversed
+            numbers using the <code>sum()</code> built-in function.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def reverse_and_sum(numbers):
+    reversed_numbers = numbers[::-1]
+    return sum(reversed_numbers)
+
+numbers = [1, 2, 3, 4, 5]
+print(reverse_and_sum(numbers))  # Output: 15</pre
+              >
+            </div>
+          </details>
+
+          <h3>Find Non-Adjacent Sum</h3>
+          <p>
+            Write a function <code>non_adjacent_sum</code> that takes a list of
+            numbers and returns the sum of all non-adjacent numbers (numbers
+            that do not directly follow each other in the list).
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def non_adjacent_sum(numbers):
+    return sum(numbers[::2])
+
+numbers = [1, 2, 3, 4, 5, 6]
+print(non_adjacent_sum(numbers))  # Output: 9</pre
+              >
+            </div>
+          </details>
+
+          <h3>Loop with Conditional Logic and Built-in Function</h3>
+          <p>
+            Create a function <code>remove_duplicates</code> that takes a list
+            of numbers and removes any duplicate values while preserving the
+            order of elements. Use a loop and a built-in function to handle
+            this.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def remove_duplicates(numbers):
+    unique_numbers = []
+    for num in numbers:
+        if num not in unique_numbers:
+            unique_numbers.append(num)
+    return unique_numbers
+
+numbers = [1, 2, 2, 3, 4, 4, 5]
+print(remove_duplicates(numbers))  # Output: [1, 2, 3, 4, 5]</pre
+              >
+            </div>
+          </details>
+
+          <h3>Find Maximum After Removing a Specific Value</h3>
+          <p>
+            Write a function <code>max_after_removal</code> that takes a list of
+            numbers and a value to remove from the list. The function should
+            return the maximum value in the list after the specified value has
+            been removed.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def max_after_removal(numbers, value_to_remove):
+    numbers = [num for num in numbers if num != value_to_remove]
+    return max(numbers)
+
+numbers = [1, 3, 7, 8, 7, 5]
+print(max_after_removal(numbers, 7))  # Output: 8</pre
+              >
+            </div>
+          </details>
+
+          <h3>Loop with String Manipulation</h3>
+          <p>
+            Create a function <code>replace_vowels</code> that takes a string as
+            a parameter and replaces all vowels with a specified character
+            (default is '*'). Ensure the function works with both uppercase and
+            lowercase letters.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def replace_vowels(text, replacement='*'):
+    vowels = "aeiouAEIOU"
+    for vowel in vowels:
+        text = text.replace(vowel, replacement)
+    return text
+
+print(replace_vowels("Hello World"))  # Output: H*ll* W*rld</pre
+              >
+            </div>
+          </details>
+
+          <h3>Find the Difference Between Consecutive Elements</h3>
+          <p>
+            Write a function <code>find_differences</code> that takes a list of
+            numbers and returns a list of the absolute differences between
+            consecutive elements.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def find_differences(numbers):
+    differences = []
+    for i in range(1, len(numbers)):
+        differences.append(abs(numbers[i] - numbers[i - 1]))
+    return differences
+
+numbers = [10, 5, 12, 8, 15]
+print(find_differences(numbers))  # Output: [5, 7, 4, 7]</pre
+              >
+            </div>
+          </details>
+        </section>
+      </main>
     </div>
     <footer>
-        <p>&copy; 2024 We Codez</p>
+      <p>&copy; 2024 We Codez</p>
     </footer>
-</body>
+  </body>
 </html>
