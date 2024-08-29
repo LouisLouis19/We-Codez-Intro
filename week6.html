@@ -1,65 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction to Programming - Multiple Return Values and Error Handling</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Introduction to Programming - Multiple Return Values and Error Handling
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Introduction to Programming</h1>
-        <h2>Week 6: Multiple Return Values and Error Handling in Python Functions</h2>
+      <h1>Introduction to Programming</h1>
+      <h2>
+        Week 6: Multiple Return Values and Error Handling in Python Functions
+      </h2>
     </header>
 
     <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
-                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
-                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
-                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
-                    <li><a href="week5.html">Week 5 - Python Functions (Part 2)</a></li>
-                    <li><a href="week6.html" class="active">Week 6 Overview</a></li>
-                    <li><a href="week7.html">Week 7 - Data Structures</a></li>
-                    <li><a href="week8.html">Week 8 - Data Structures (Part 2)</a></li>
-                    <li><a href="week9.html">Week 9 - Data Structures (Part 3)</a></li>
-                    <li><a href="week10.html">Week 10 - Project</a></li>
-                    <li><a href="week11.html">Week 11 - Algorithms</a></li>
-                    <li><a href="week12.html">Week 12 - Algorithms (Part 2)</a></li>
-                    <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
-                    <li><a href="conclusion.html">Conclusion</a></li>
-                    <li><a href="project.html">Project</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <section class="overview">
-                <h2>Overview</h2>
-                <p>This week, we will explore how to return multiple values from a function and how to handle errors effectively in Python. Mastering these techniques will help you write more robust and versatile functions.</p>
-            </section>
-
-            <section class="multiple-returns">
-                <h2>Multiple Return Values</h2>
-                <p>In Python, functions can return more than one value by separating them with commas. The returned values are usually captured in a tuple, which can be unpacked into individual variables.</p>
-                <p>Example:</p>
-                <pre class="code-block">def get_coordinates():
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Programming Basics</a></li>
+            <li><a href="week2.html">Python Control Flow</a></li>
+            <li><a href="week3.html">Python Control Flow (Part 2)</a></li>
+            <li><a href="week4.html">Python Functions </a></li>
+            <li><a href="week5.html">Python Functions (Part 2)</a></li>
+            <li>
+              <a href="week6.html" class="active">Python Functions (Part 3)</a>
+            </li>
+            <li><a href="week7.html">Data Structures</a></li>
+            <li><a href="week8.html">Data Structures (Part 2)</a></li>
+            <li><a href="week9.html">Data Structures (Part 3)</a></li>
+            <li><a href="week10.html">Project</a></li>
+            <li><a href="week11.html">Algorithms</a></li>
+            <li><a href="week12.html">Algorithms (Part 2)</a></li>
+            <li><a href="week13.html">Debugging and Problem Solving</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="project.html">Project</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <section class="overview">
+          <h2>Overview</h2>
+          <p>
+            This week, we will explore how to return multiple values from a
+            function and how to handle errors effectively in Python. Mastering
+            these techniques will help you write more robust and versatile
+            functions.
+          </p>
+        </section>
+        <section class="multiple-returns">
+          <h2>Multiple Return Values</h2>
+          <p>
+            In Python, functions are capable of returning more than one value by
+            separating them with commas. When multiple values are returned, they
+            are usually encapsulated into a tuple, which can then be unpacked
+            into individual variables. This feature is particularly useful when
+            a function needs to provide several pieces of related information at
+            once.
+          </p>
+          <p>Example:</p>
+          <pre class="code-block">
+def get_coordinates():
     x = 10
     y = 20
     return x, y
 
 x_coord, y_coord = get_coordinates()
 print("X:", x_coord)
-print("Y:", y_coord)</pre>
-                <p>Here, the function `get_coordinates` returns two values: `x` and `y`, which are unpacked into `x_coord` and `y_coord` respectively.</p>
-            </section>
+print("Y:", y_coord)</pre
+          >
+          <p>
+            Here, the function `get_coordinates` returns two values: `x` and
+            `y`. These two values are returned as a tuple and are then unpacked
+            into two separate variables, `x_coord` and `y_coord`. The values can
+            now be used individually within the program.
+          </p>
+          <p>
+            Returning multiple values can also work with more complex objects:
+          </p>
+          <pre class="code-block">
+def get_person_info():
+    name = "Alice"
+    age = 30
+    address = {"city": "New York", "zip_code": "10001"}
+    return name, age, address
 
-            <section class="error-handling">
-                <h2>Basic Error Handling</h2>
-                <p>Error handling is essential to prevent your program from crashing when something goes wrong. Python provides the `try`, `except`, and `finally` blocks to handle exceptions and clean up resources.</p>
-                <p>Example:</p>
-                <pre class="code-block">def divide_numbers(a, b):
+person_name, person_age, person_address = get_person_info()
+print("Name:", person_name)
+print("Age:", person_age)
+print("City:", person_address["city"])
+print("Zip Code:", person_address["zip_code"])</pre
+          >
+          <p>
+            In this case, the function `get_person_info` returns three values: a
+            string (name), an integer (age), and a dictionary (address). These
+            values are unpacked and accessed individually, including dictionary
+            values for specific information like the city and zip code.
+          </p>
+
+          <p>
+            If you only need some of the return values, you can use an
+            underscore (`_`) to ignore the values you don't need:
+          </p>
+          <pre class="code-block">
+def get_coordinates():
+    x = 10
+    y = 20
+    return x, y
+
+x_coord, _ = get_coordinates()
+print("X:", x_coord)</pre
+          >
+          <p>
+            Here, only the `x` coordinate is captured, while the `y` coordinate
+            is ignored using an underscore.
+          </p>
+
+          <p>
+            Returning multiple values offers flexibility in organizing your code
+            and reduces the need to define extra data structures just to return
+            additional information.
+          </p>
+        </section>
+
+        <section class="error-handling">
+          <h2>Basic Error Handling</h2>
+          <p>
+            Error handling is essential to prevent your program from crashing
+            when something goes wrong. Python provides the `try`, `except`,
+            `else`, and `finally` blocks to handle exceptions and clean up
+            resources. These blocks help you manage errors gracefully and ensure
+            that your program can continue running even if an unexpected
+            situation arises.
+          </p>
+          <p>
+            - The <code>try</code> block contains code that might raise an
+            exception. - The <code>except</code> block is used to catch and
+            handle specific exceptions. - The <code>else</code> block, if
+            included, runs if no exceptions were raised in the
+            <code>try</code> block. - The <code>finally</code> block always
+            executes, regardless of whether an exception was raised or not,
+            making it a good place to release resources or perform cleanup
+            tasks.
+          </p>
+          <p>Example 1: Handling Division by Zero</p>
+          <pre class="code-block">
+def divide_numbers(a, b):
     try:
         result = a / b
     except ZeroDivisionError:
@@ -69,35 +157,107 @@ print("Y:", y_coord)</pre>
     finally:
         print("Execution complete.")
 
-print(divide_numbers(10, 2))
-print(divide_numbers(10, 0))</pre>
-                <p>In this example, the function `divide_numbers` handles the potential error of dividing by zero and returns an appropriate message without crashing the program.</p>
-            </section>
+print(divide_numbers(10, 2))  # Output: 5.0
+print(divide_numbers(10, 0))  # Output: Error: Cannot divide by zero.</pre
+          >
+          <p>
+            In this example, the function <code>divide_numbers</code> handles
+            the potential error of dividing by zero by catching the
+            <code>ZeroDivisionError</code> and returning a friendly error
+            message. The <code>finally</code> block ensures that "Execution
+            complete." is printed regardless of whether an error occurred.
+          </p>
+          <p>Example 2: Handling File Operations</p>
+          <pre class="code-block">
+def read_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            content = file.read()
+    except FileNotFoundError:
+        return "Error: File not found."
+    except IOError:
+        return "Error: IOError occurred while reading the file."
+    else:
+        return content
+    finally:
+        print("File operation complete.")
 
-            <section class="practice">
-                <h2>Practice</h2>
-                <h3>1. Multiple Return Values</h3>
-                <p>Create a function `calculate_stats` that takes a list of numbers and returns the sum and average of the numbers. Test the function with different lists.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def calculate_stats(numbers):
+print(read_file("example.txt"))  # Output depends on the existence of the file</pre
+          >
+          <p>
+            This example demonstrates handling errors when performing file
+            operations. If the file does not exist, a
+            <code>FileNotFoundError</code> is caught, and a message is returned.
+            If there is an IO error while reading the file, an
+            <code>IOError</code> is caught. The <code>finally</code> block
+            ensures that "File operation complete." is printed regardless of the
+            outcome.
+          </p>
+          <p>Example 3: Handling Multiple Exceptions</p>
+          <pre class="code-block">
+def calculate_inverse(number):
+    try:
+        result = 1 / number
+    except ZeroDivisionError:
+        return "Error: Cannot divide by zero."
+    except TypeError:
+        return "Error: Invalid type. Please provide a number."
+    else:
+        return result
+    finally:
+        print("Inverse calculation complete.")
+
+print(calculate_inverse(5))     # Output: 0.2
+print(calculate_inverse(0))     # Output: Error: Cannot divide by zero.
+print(calculate_inverse("a"))   # Output: Error: Invalid type. Please provide a number.</pre
+          >
+          <p>
+            This example demonstrates how to handle multiple exceptions. The
+            function
+            <code>calculate_inverse</code> handles both
+            <code>ZeroDivisionError</code> and
+            <code>TypeError</code> exceptions. The <code>finally</code> block
+            ensures that "Inverse calculation complete." is printed no matter
+            what happens during the calculation.
+          </p>
+        </section>
+
+        <section class="practice">
+          <h2>Practice</h2>
+          <h3>1. Multiple Return Values</h3>
+          <p>
+            Create a function `calculate_stats` that takes a list of numbers and
+            returns the sum and average of the numbers. Test the function with
+            different lists.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def calculate_stats(numbers):
     total = sum(numbers)
     average = total / len(numbers)
     return total, average
 
 total, average = calculate_stats([1, 2, 3, 4, 5])
 print("Sum:", total)
-print("Average:", average)</pre>
-                    </div>
-                </details>
+print("Average:", average)</pre
+              >
+            </div>
+          </details>
 
-                <h3>2. Error Handling with User Input</h3>
-                <p>Write a function `get_number_from_user` that prompts the user for a number and returns it. Use error handling to ensure that the input is a valid number and handle the case where the user enters something that is not a number.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def get_number_from_user():
+          <h3>2. Error Handling with User Input</h3>
+          <p>
+            Write a function `get_number_from_user` that prompts the user for a
+            number and returns it. Use error handling to ensure that the input
+            is a valid number and handle the case where the user enters
+            something that is not a number.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def get_number_from_user():
     while True:
         try:
             number = int(input("Enter a number: "))
@@ -106,16 +266,23 @@ print("Average:", average)</pre>
             print("Invalid input. Please enter a valid number.")
 
 user_number = get_number_from_user()
-print("You entered:", user_number)</pre>
-                    </div>
-                </details>
+print("You entered:", user_number)</pre
+              >
+            </div>
+          </details>
 
-                <h3>3. Function with Multiple Returns and Error Handling</h3>
-                <p>Combine what you've learned by writing a function `safe_division` that takes two numbers and returns the quotient and remainder. Handle any potential errors (e.g., division by zero) and provide appropriate feedback to the user.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def safe_division(a, b):
+          <h3>3. Function with Multiple Returns and Error Handling</h3>
+          <p>
+            Combine what you've learned by writing a function `safe_division`
+            that takes two numbers and returns the quotient and remainder.
+            Handle any potential errors (e.g., division by zero) and provide
+            appropriate feedback to the user.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def safe_division(a, b):
     try:
         quotient = a / b
         remainder = a % b
@@ -125,16 +292,22 @@ print("You entered:", user_number)</pre>
 
 quotient, remainder = safe_division(10, 3)
 print("Quotient:", quotient)
-print("Remainder:", remainder)</pre>
-                    </div>
-                </details>
+print("Remainder:", remainder)</pre
+              >
+            </div>
+          </details>
 
-                <h3>4. Returning Multiple Types</h3>
-                <p>Create a function `analyze_string` that takes a string and returns the number of characters, the number of words, and the string in uppercase. Test the function with different inputs.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def analyze_string(text):
+          <h3>4. Returning Multiple Types</h3>
+          <p>
+            Create a function `analyze_string` that takes a string and returns
+            the number of characters, the number of words, and the string in
+            uppercase. Test the function with different inputs.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def analyze_string(text):
     char_count = len(text)
     word_count = len(text.split())
     upper_text = text.upper()
@@ -143,37 +316,16 @@ print("Remainder:", remainder)</pre>
 chars, words, upper = analyze_string("Hello, world!")
 print("Characters:", chars)
 print("Words:", words)
-print("Uppercase:", upper)</pre>
-                    </div>
-                </details>
-
-                <h3>5. Nested Functions with Error Handling</h3>
-                <p>Write a function `process_numbers` that contains another function `divide_numbers` inside it. The `divide_numbers` function should divide two numbers with error handling for division by zero. The outer function should use the result to perform additional calculations.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def process_numbers(a, b):
-    def divide_numbers(a, b):
-        try:
-            return a / b
-        except ZeroDivisionError:
-            return "Error: Cannot divide by zero."
-
-    result = divide_numbers(a, b)
-    if isinstance(result, str):
-        return result
-    else:
-        return result * 2
-
-print(process_numbers(10, 2))
-print(process_numbers(10, 0))</pre>
-                    </div>
-                </details>
-            </section>
-        </main>
+print("Uppercase:", upper)</pre
+              >
+            </div>
+          </details>
+        </section>
+        <p><a href="assignments/week6-practice.html">Practice Exercises</a></p>
+      </main>
     </div>
     <footer>
-        <p>&copy; 2024 We Codez</p>
+      <p>&copy; 2024 We Codez</p>
     </footer>
-</body>
+  </body>
 </html>

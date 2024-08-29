@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 Practice Exercises - Set 2</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="assignments">
+    <h1>Python Practice Exercises</h1>
+    <p>
+      Complete the following exercises to strengthen your understanding of Week
+      3 Concepts.
+    </p>
+
+    <section class="task">
+      <h2>1. Countdown Timer</h2>
+      <p>
+        Write a <code>while</code> loop that counts down from a given number to
+        zero and prints "Liftoff!" when finished.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+countdown = int(input("Enter the countdown start number: "))
+
+while countdown >= 0:
+    print(countdown)
+    countdown -= 1
+
+print("Liftoff!")</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>2. Number Sequence Checker</h2>
+      <p>
+        Write a program that continuously takes an integer input from the user
+        until the user inputs a number that is less than the previous number
+        entered.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+previous_number = int(input("Enter a number: "))
+
+while True:
+    current_number = int(input("Enter the next number: "))
+    if current_number < previous_number:
+        print("Sequence interrupted. Exiting...")
+        break
+    else:
+        previous_number = current_number</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>3. Divisibility by Prime Numbers</h2>
+      <p>
+        Write a program that prints numbers from 1 to 100, but for numbers
+        divisible by 2, 3, or 5, print "Divisible by a Prime".
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+for i in range(1, 101):
+    if i % 2 == 0 or i % 3 == 0 or i % 5 == 0:
+        print("Divisible by a Prime")
+    else:
+        print(i)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>4. Collatz Conjecture</h2>
+      <p>
+        Implement the Collatz Conjecture: given a number <code>n</code>, if it's
+        even, divide it by 2, and if it's odd, multiply it by 3 and add 1.
+        Repeat this process until <code>n</code> becomes 1.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+n = int(input("Enter a number: "))
+
+while n != 1:
+    print(n, end=" ")
+    if n % 2 == 0:
+        n = n // 2
+    else:
+        n = n * 3 + 1
+
+print(n)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>5. Skipping Multiples</h2>
+      <p>
+        Write a program that prints numbers from 1 to 50 but skips the numbers
+        that are divisible by both 4 and 6.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+for i in range(1, 51):
+    if i % 4 == 0 and i % 6 == 0:
+        continue
+    print(i)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>6. Pyramid Pattern</h2>
+      <p>
+        Write a program that prints the following pattern for a given number
+        <code>n</code>: <br />For n = 4: <br />1 <br />1 2 <br />1 2 3 <br />1 2
+        3 4
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+n = int(input("Enter the height of the pyramid: "))
+
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>7. Cumulative Sum Until Negative</h2>
+      <p>
+        Write a program that keeps asking the user for a number and adds it to a
+        cumulative sum. Stop the program if the user enters a negative number,
+        and print the final cumulative sum.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+total_sum = 0
+
+while True:
+    num = int(input("Enter a number: "))
+    if num < 0:
+        break
+    total_sum += num
+
+print("Cumulative sum:", total_sum)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>8. Digit Sum of a Number</h2>
+      <p>
+        Write a program that takes an integer input and calculates the sum of
+        its digits using a <code>while</code> loop.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+number = int(input("Enter a number: "))
+digit_sum = 0
+
+while number > 0:
+    digit_sum += number % 10
+    number = number // 10
+
+print("Sum of digits:", digit_sum)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <br />
+    <p><a href="../index.html">Back to Main Page</a></p>
+  </body>
+</html>

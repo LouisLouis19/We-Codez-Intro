@@ -395,7 +395,7 @@ print("Sorted:", sorted_list)      # Output: [1, 1, 3, 4, 5, 9]</pre
         <section class="practice">
           <h2>Practice</h2>
 
-          <h3>Loop with Default Parameters</h3>
+          <h3>1. Loop with Default Parameters</h3>
           <p>
             Create a function <code>repeat_message</code> that takes a message
             and a number of repetitions as parameters, with a default value of 3
@@ -417,7 +417,7 @@ repeat_message("Python is fun", 5)</pre
             </div>
           </details>
 
-          <h3>Cumulative Product of Odd Numbers</h3>
+          <h3>2. Cumulative Product of Odd Numbers</h3>
           <p>
             Write a function <code>cumulative_product</code> that takes a list
             of numbers and returns the cumulative product of only the odd
@@ -440,7 +440,7 @@ print(cumulative_product(numbers))  # Output: 15</pre
             </div>
           </details>
 
-          <h3>Loop with Conditional Logic and Default Parameters</h3>
+          <h3>3. Loop with Conditional Logic and Default Parameters</h3>
           <p>
             Create a function <code>find_largest</code> that accepts a list of
             numbers and an optional threshold (default value of 10). The
@@ -465,7 +465,7 @@ print(find_largest(numbers))  # Output: 7</pre
             </div>
           </details>
 
-          <h3>Find the Longest Increasing Sequence</h3>
+          <h3>4. Find the Longest Increasing Sequence</h3>
           <p>
             Write a function <code>longest_increasing_sequence</code> that takes
             a list of numbers and returns the length of the longest increasing
@@ -493,7 +493,7 @@ print(longest_increasing_sequence(numbers))  # Output: 4</pre
             </div>
           </details>
 
-          <h3>Loop with Built-in Functions and Reverse Order</h3>
+          <h3>5. Loop with Built-in Functions and Reverse Order</h3>
           <p>
             Create a function <code>reverse_and_sum</code> that takes a list of
             numbers, reverses the order of the list, and then sums the reversed
@@ -512,115 +512,8 @@ print(reverse_and_sum(numbers))  # Output: 15</pre
               >
             </div>
           </details>
-
-          <h3>Find Non-Adjacent Sum</h3>
-          <p>
-            Write a function <code>non_adjacent_sum</code> that takes a list of
-            numbers and returns the sum of all non-adjacent numbers (numbers
-            that do not directly follow each other in the list).
-          </p>
-          <details>
-            <summary>Solution</summary>
-            <div>
-              <pre class="code-block">
-def non_adjacent_sum(numbers):
-    return sum(numbers[::2])
-
-numbers = [1, 2, 3, 4, 5, 6]
-print(non_adjacent_sum(numbers))  # Output: 9</pre
-              >
-            </div>
-          </details>
-
-          <h3>Loop with Conditional Logic and Built-in Function</h3>
-          <p>
-            Create a function <code>remove_duplicates</code> that takes a list
-            of numbers and removes any duplicate values while preserving the
-            order of elements. Use a loop and a built-in function to handle
-            this.
-          </p>
-          <details>
-            <summary>Solution</summary>
-            <div>
-              <pre class="code-block">
-def remove_duplicates(numbers):
-    unique_numbers = []
-    for num in numbers:
-        if num not in unique_numbers:
-            unique_numbers.append(num)
-    return unique_numbers
-
-numbers = [1, 2, 2, 3, 4, 4, 5]
-print(remove_duplicates(numbers))  # Output: [1, 2, 3, 4, 5]</pre
-              >
-            </div>
-          </details>
-
-          <h3>Find Maximum After Removing a Specific Value</h3>
-          <p>
-            Write a function <code>max_after_removal</code> that takes a list of
-            numbers and a value to remove from the list. The function should
-            return the maximum value in the list after the specified value has
-            been removed.
-          </p>
-          <details>
-            <summary>Solution</summary>
-            <div>
-              <pre class="code-block">
-def max_after_removal(numbers, value_to_remove):
-    numbers = [num for num in numbers if num != value_to_remove]
-    return max(numbers)
-
-numbers = [1, 3, 7, 8, 7, 5]
-print(max_after_removal(numbers, 7))  # Output: 8</pre
-              >
-            </div>
-          </details>
-
-          <h3>Loop with String Manipulation</h3>
-          <p>
-            Create a function <code>replace_vowels</code> that takes a string as
-            a parameter and replaces all vowels with a specified character
-            (default is '*'). Ensure the function works with both uppercase and
-            lowercase letters.
-          </p>
-          <details>
-            <summary>Solution</summary>
-            <div>
-              <pre class="code-block">
-def replace_vowels(text, replacement='*'):
-    vowels = "aeiouAEIOU"
-    for vowel in vowels:
-        text = text.replace(vowel, replacement)
-    return text
-
-print(replace_vowels("Hello World"))  # Output: H*ll* W*rld</pre
-              >
-            </div>
-          </details>
-
-          <h3>Find the Difference Between Consecutive Elements</h3>
-          <p>
-            Write a function <code>find_differences</code> that takes a list of
-            numbers and returns a list of the absolute differences between
-            consecutive elements.
-          </p>
-          <details>
-            <summary>Solution</summary>
-            <div>
-              <pre class="code-block">
-def find_differences(numbers):
-    differences = []
-    for i in range(1, len(numbers)):
-        differences.append(abs(numbers[i] - numbers[i - 1]))
-    return differences
-
-numbers = [10, 5, 12, 8, 15]
-print(find_differences(numbers))  # Output: [5, 7, 4, 7]</pre
-              >
-            </div>
-          </details>
         </section>
+        <p><a href="assignments/week5-practice.html">Practice Exercises</a></p>
       </main>
     </div>
     <footer>
