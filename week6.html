@@ -28,7 +28,7 @@
             <li>
               <a href="week6.html" class="active">Python Functions (Part 3)</a>
             </li>
-            <li><a href="week7.html">Data Structures</a></li>
+            <!-- <li><a href="week7.html">Data Structures</a></li>
             <li><a href="week8.html">Data Structures (Part 2)</a></li>
             <li><a href="week9.html">Data Structures (Part 3)</a></li>
             <li><a href="week10.html">Project</a></li>
@@ -36,7 +36,7 @@
             <li><a href="week12.html">Algorithms (Part 2)</a></li>
             <li><a href="week13.html">Debugging and Problem Solving</a></li>
             <li><a href="conclusion.html">Conclusion</a></li>
-            <li><a href="project.html">Project</a></li>
+            <li><a href="project.html">Project</a></li> -->
           </ul>
         </nav>
       </aside>
@@ -145,6 +145,7 @@ print("X:", x_coord)</pre
             making it a good place to release resources or perform cleanup
             tasks.
           </p>
+
           <p>Example 1: Handling Division by Zero</p>
           <pre class="code-block">
 def divide_numbers(a, b):
@@ -167,6 +168,7 @@ print(divide_numbers(10, 0))  # Output: Error: Cannot divide by zero.</pre
             message. The <code>finally</code> block ensures that "Execution
             complete." is printed regardless of whether an error occurred.
           </p>
+
           <p>Example 2: Handling File Operations</p>
           <pre class="code-block">
 def read_file(filename):
@@ -193,6 +195,7 @@ print(read_file("example.txt"))  # Output depends on the existence of the file</
             ensures that "File operation complete." is printed regardless of the
             outcome.
           </p>
+
           <p>Example 3: Handling Multiple Exceptions</p>
           <pre class="code-block">
 def calculate_inverse(number):
@@ -219,6 +222,37 @@ print(calculate_inverse("a"))   # Output: Error: Invalid type. Please provide a 
             <code>TypeError</code> exceptions. The <code>finally</code> block
             ensures that "Inverse calculation complete." is printed no matter
             what happens during the calculation.
+          </p>
+
+          <h3>Raising Errors</h3>
+          <p>
+            Sometimes, you might want to raise an error intentionally in your
+            code, either to signal an invalid condition or to enforce rules. You
+            can use the <code>raise</code> statement to throw an exception
+            manually. This is useful when your code encounters an unexpected
+            situation that requires the program to stop or handle the error
+            elsewhere.
+          </p>
+
+          <p>Example 4: Raising a ValueError</p>
+          <pre class="code-block">
+def check_positive(number):
+    if number < 0:
+        raise ValueError("Error: The number must be positive.")
+    return number
+
+try:
+    print(check_positive(5))  # Output: 5
+    print(check_positive(-3))  # Raises ValueError
+except ValueError as e:
+    print(e)  # Output: Error: The number must be positive.</pre
+          >
+          <p>
+            In this example, the function <code>check_positive</code> raises a
+            <code>ValueError</code> if the input number is negative. When
+            <code>check_positive(-3)</code> is called, the
+            <code>raise</code> statement throws the error, and the
+            <code>except</code> block catches it, printing the error message.
           </p>
         </section>
 
