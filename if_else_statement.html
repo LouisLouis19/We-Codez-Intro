@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Programming - If/Else Statements</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Introduction to Programming</h1>
+      <h2>Control Flow: If/Else Statements</h2>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Programming Basics</a></li>
+            <li>
+              <a href="if_else_statements.html" class="active"
+                >If/Else Statements</a
+              >
+            </li>
+            <li><a href="for_loops.html">For Loops</a></li>
+            <li><a href="week3.html">Python Control Flow (Part 2)</a></li>
+            <li><a href="week4.html">Python Functions</a></li>
+            <li><a href="week5.html">Python Functions (Part 2)</a></li>
+            <!-- Add more links as needed -->
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <section class="overview">
+          <h2>Overview</h2>
+          <p>
+            This section covers conditional statements, focusing on the
+            `if/else` structure in Python.
+          </p>
+        </section>
+
+        <section class="conditionals">
+          <h2>If/Else Statements</h2>
+          <p>
+            Conditional statements allow you to execute certain parts of your
+            code based on specific conditions. The `if/else` structure in Python
+            is one of the fundamental tools for decision-making in code.
+          </p>
+          <p>Basic structure:</p>
+          <pre class="code-block">
+if condition:
+    # Code to execute if the condition is True
+else:
+    # Code to execute if the condition is False</pre
+          >
+          <p>Example:</p>
+          <pre class="code-block">
+age = 20
+
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")</pre
+          >
+        </section>
+
+        <section class="else-if">
+          <h2>Elif and Else Statements</h2>
+          <p>
+            The <code>if</code> statement allows us to execute code based on a
+            condition. However, when you need to check multiple conditions,
+            using just an <code>if</code> statement can be inefficient. This is
+            where <code>elif</code> (short for "else if") and
+            <code>else</code> come into play.
+          </p>
+
+          <p>
+            <strong>Elif</strong> statements help handle multiple conditions.
+            Once a condition in an <code>if</code> or <code>elif</code> block
+            evaluates as true, the corresponding block of code is executed, and
+            the remaining conditions are ignored.
+          </p>
+
+          <p>
+            The <strong>else</strong> block serves as a "catch-all" for
+            situations where none of the <code>if</code> or
+            <code>elif</code> conditions are met. It ensures that your code
+            still responds to inputs even when they don't match any specific
+            condition.
+          </p>
+
+          <p>Example:</p>
+          <pre class="code-block">
+score = 85
+        
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+else:
+    print("Grade: F")</pre
+          >
+
+          <p>
+            <strong>Explanation:</strong> In this example, the program checks a
+            score to determine the appropriate grade. The first condition checks
+            if the score is greater than or equal to 90. If true, it prints
+            "Grade: A". If false, it moves to the next
+            <code>elif</code> statement, checking if the score is greater than
+            or equal to 80, and so on. Finally, if none of the conditions are
+            true, the <code>else</code> block runs, printing "Grade: F". Note
+            that once a condition is true, the remaining conditions are skipped.
+          </p>
+
+          <p>
+            This conditional structure ensures flexibility in decision-making by
+            providing multiple options for varying conditions. It also keeps
+            your code clean and easy to follow, avoiding complex and nested
+            <code>if</code> statements.
+          </p>
+        </section>
+
+        <section class="logical-operators">
+          <h2>Logical Operators</h2>
+          <h3>AND</h3>
+          <pre class="code-block">
+age = 25
+if age >= 18 and age <= 35:
+    print("You are a young adult.")
+          </pre>
+
+          <h3>OR</h3>
+          <pre class="code-block">
+temperature = 30
+if temperature < 15 or temperature > 25:
+    print("The weather is outside the comfortable range.")
+          </pre>
+
+          <h3>NOT</h3>
+          <pre class="code-block">
+is_raining = False
+if not is_raining:
+    print("You can leave the umbrella at home.")
+          </pre>
+        </section>
+
+        <section class="practice">
+          <h2>Practice</h2>
+          <p>
+            Try out these simple exercises to get comfortable with if/else
+            statements:
+          </p>
+
+          <h3>1. Positive or Negative</h3>
+          <p>Check if a number is positive or negative:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+number = 4
+if number >= 0:
+    print("Positive")
+else:
+    print("Negative")</pre
+            >
+          </details>
+
+          <h3>2. Greater Than 10</h3>
+          <p>Check if a number is greater than 10:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+number = 15
+if number > 10:
+    print("Greater than 10")
+else:
+    print("Not greater than 10")</pre
+            >
+          </details>
+
+          <h3>3. Check if a Number is Zero</h3>
+          <p>Write a program to check if a number is zero:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+number = 0
+if number == 0:
+    print("The number is zero.")
+else:
+    print("The number is not zero.")</pre
+            >
+          </details>
+
+          <h3>4. Check if a String is Empty</h3>
+          <p>Check if a string is empty:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+text = ""
+if text == "":
+    print("The string is empty.")
+else:
+    print("The string is not empty.")</pre
+            >
+          </details>
+
+          <h3>5. Compare Two Numbers</h3>
+          <p>Check if one number is greater than another:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+a = 3
+b = 5
+if a > b:
+    print("a is greater than b")
+else:
+    print("a is not greater than b")</pre
+            >
+          </details>
+
+          <h3>6. Check if Someone Can Vote</h3>
+          <p>Check if a person is old enough to vote (18 years or older):</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+age = 20
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible to vote")</pre
+            >
+          </details>
+
+          <h3>7. Check if a Number is Positive, Negative, or Zero</h3>
+          <p>Determine if a number is positive, negative, or zero:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+number = -1
+if number > 0:
+    print("Positive")
+elif number == 0:
+    print("Zero")
+else:
+    print("Negative")</pre
+            >
+          </details>
+
+          <h3>8. Check if Someone is a Teenager</h3>
+          <p>Check if a person is a teenager (between 13 and 19):</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+age = 14
+if 13 <= age <= 19:
+    print("Teenager")
+else:
+    print("Not a teenager")</pre
+            >
+          </details>
+
+          <h3>9. Simple Password Check</h3>
+          <p>Check if a given password matches a stored password:</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+password = "1234"
+entered_password = "1234"
+if entered_password == password:
+    print("Access Granted")
+else:
+    print("Access Denied")</pre
+            >
+          </details>
+        </section>
+
+        <p>
+          <a href="assignments/if-else-practice.html"
+            >More Practice Exercises</a
+          >
+        </p>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 We Codez</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1 Practice Exercises</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="assignments">
+    <h1>Python Practice Exercises</h1>
+    <p>
+      Complete the following exercises to strengthen your understanding of Week
+      1 Concepts
+    </p>
+
+    <section class="task">
+      <h2>1. Simple If/Else Statement</h2>
+      <p>Check if a number is positive or negative:</p>
+      <pre class="code-block">number = -5</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+number = -5
+if number >= 0:
+    print("The number is positive.")
+else:
+    print("The number is negative.")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>2. Elif Statement</h2>
+      <p>Determine the life stage based on age:</p>
+      <pre class="code-block">age = 65</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+age = 65
+if age < 13:
+    print("Child")
+elif 13 <= age < 20:
+    print("Teenager")
+elif 20 <= age < 65:
+    print("Adult")
+else:
+    print("Senior")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>3. Check Even or Odd</h2>
+      <p>Write a program that checks if a number is even or odd:</p>
+      <pre class="code-block">number = 7</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+number = 7
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>4. Check Divisibility by 3, 5, or Both</h2>
+      <p>
+        Create a program that checks if a number is divisible by 3, 5, or both:
+      </p>
+      <pre class="code-block">number = 15</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+number = 15
+if number % 3 == 0 and number % 5 == 0:
+    print("Divisible by both 3 and 5.")
+elif number % 3 == 0:
+    print("Divisible by 3.")
+elif number % 5 == 0:
+    print("Divisible by 5.")
+else:
+    print("Not divisible by 3 or 5.")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>5. Determine the Largest of Three Numbers</h2>
+      <p>Write a program to find the largest of three numbers:</p>
+      <pre class="code-block">a = 5, b = 12, c = 7</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+a, b, c = 5, 12, 7
+if a >= b and a >= c:
+    print("The largest number is:", a)
+elif b >= a and b >= c:
+    print("The largest number is:", b)
+else:
+    print("The largest number is:", c)
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>6. Check Leap Year</h2>
+      <p>Write a program to check if a year is a leap year:</p>
+      <pre class="code-block">year = 2020</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+year = 2020
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print("Leap year")
+        else:
+            print("Not a leap year")
+    else:
+        print("Leap year")
+else:
+    print("Not a leap year")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>7. Check Temperature Range</h2>
+      <p>Categorize a temperature:</p>
+      <pre class="code-block">temperature = 30</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+temperature = 30
+if temperature >= 30:
+    print("It's hot.")
+elif 20 <= temperature < 30:
+    print("It's warm.")
+elif 10 <= temperature < 20:
+    print("It's cool.")
+else:
+    print("It's cold.")
+            </pre
+        >
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>8. Check if a Number is Positive, Even, and Divisible by 4</h2>
+      <p>
+        Write a program that checks if a number is positive, even, and divisible
+        by 4:
+      </p>
+      <pre class="code-block">number = 8</pre>
+      <details>
+        <summary>Solution</summary>
+        <pre class="code-block">
+number = 8
+if number > 0 and number % 2 == 0 and number % 4 == 0:
+    print("The number is positive, even, and divisible by 4.")
+elif number > 0 and number % 2 == 0:
+    print("The number is positive and even but not divisible by 4.")
+elif number <= 0:
+    print("The number is not positive.")
+else:
+    print("The number is odd.")</pre
+        >
+      </details>
+    </section>
+
+    <br />
+    <p><a href="../index.html">Back to Main Page</a></p>
+  </body>
+</html>
