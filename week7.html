@@ -1,183 +1,540 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to Programming - Python Data Structures</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Introduction to Programming</h1>
-        <h2>Week 7: Python Data Structures - Lists and Tuples</h2>
+      <h1>Introduction to Programming</h1>
+      <h2>Week 7: Python Data Structures - Lists and Tuples</h2>
     </header>
 
     <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Week 1 - Programming Basics</a></li>
-                    <li><a href="week2.html">Week 2 - Python Control Flow</a></li>
-                    <li><a href="week3.html">Week 3 - Python Control Flow (Part 2)</a></li>
-                    <li><a href="week4.html">Week 4 - Python Functions </a></li>
-                    <li><a href="week5.html">Week 5 - Python Functions (Part 2)</a></li>
-                    <li><a href="week6.html">Week 6 - Python Functions (Part 3)</a></li>
-                    <li><a href="week7.html" class="active">Week 7 Overview</a></li>
-                    <li><a href="week8.html">Week 8 - Data Structures (Part 2)</a></li>
-                    <li><a href="week9.html">Week 9 - Data Structures (Part 3)</a></li>
-                    <li><a href="week10.html">Week 10 - Project</a></li>
-                    <li><a href="week11.html">Week 11 - Algorithms</a></li>
-                    <li><a href="week12.html">Week 12 - Algorithms (Part 2)</a></li>
-                    <li><a href="week13.html">Week 13 - Debugging and Problem Solving</a></li>
-                    <li><a href="conclusion.html">Conclusion</a></li>
-                    <li><a href="project.html">Project</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <section class="overview">
-                <h2>Overview</h2>
-                <p>This week, we will dive into Python data structures, focusing on lists and tuples. These are fundamental tools for organizing and manipulating data in your programs.</p>
-            </section>
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html" class="active">Programming Basics</a></li>
+            <li><a href="week2.html">Python Control Flow</a></li>
+            <li><a href="week3.html">Python Control Flow (Part 2)</a></li>
+            <li><a href="week4.html">Python Functions </a></li>
+            <li><a href="week5.html">Python Functions (Part 2)</a></li>
+            <li><a href="week6.html">Python Functions (Part 3)</a></li>
+            <li><a href="week7.html">Data Structures</a></li>
+            <!-- <li><a href="week8.html">Data Structures (Part 2)</a></li>
+            <li><a href="week9.html">Data Structures (Part 3)</a></li>
+            <li><a href="week10.html">Project</a></li>
+            <li><a href="week11.html">Algorithms</a></li>
+            <li><a href="week12.html">Algorithms (Part 2)</a></li>
+            <li><a href="week13.html">Debugging and Problem Solving</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="project.html">Project</a></li> -->
+          </ul>
+        </nav>
+      </aside>
+      <main>
+        <section class="overview">
+          <h2>Overview</h2>
+          <p>
+            This week, we will dive into Python data structures, focusing on
+            lists and tuples. These are fundamental tools for organizing and
+            manipulating data in your programs.
+          </p>
+        </section>
 
-            <section class="lists">
-                <h2>Python Lists</h2>
-                <p>A list is an ordered, mutable collection of items. This means that the elements in a list have a specific order, and you can modify the elements after the list is created.</p>
-                
-                <h3>Creating Lists and Accessing Elements</h3>
-                <p>Lists are created using square brackets <code>[]</code> and can contain elements of any data type.</p>
-                <pre class="code-block"># Creating a list
+        <section class="lists">
+          <h2>Python Lists</h2>
+          <p>
+            A list is an ordered, mutable collection of items. This means that
+            the elements in a list have a specific order, and you can modify the
+            elements after the list is created.
+          </p>
+
+          <h3>Creating Lists and Accessing Elements</h3>
+          <p>
+            Lists are created using square brackets <code>[]</code> and can
+            contain elements of any data type.
+          </p>
+          <pre class="code-block">
+# Creating a list
 fruits = ["apple", "banana", "cherry"]
-print(fruits[0])  # Accessing the first element</pre>
+print(fruits[0])  # Accessing the first element</pre
+          >
 
-                <h3>Basic Operations</h3>
-                <ul>
-                    <li><b>Indexing:</b> Access elements by their position in the list. Indexing starts from 0.</li>
-                    <li><b>Slicing:</b> Retrieve a portion of the list using a range of indices.</li>
-                    <li><b>Appending:</b> Add an element to the end of the list using <code>append()</code>.</li>
-                    <li><b>Inserting:</b> Insert an element at a specific position using <code>insert()</code>.</li>
-                    <li><b>Removing:</b> Remove an element by its value using <code>remove()</code> or by its position using <code>pop()</code>.</li>
-                </ul>
-                <pre class="code-block"># Appending and inserting elements
+          <h3>Basic Operations</h3>
+          <ul>
+            <li>
+              <b>Indexing:</b> Access elements by their position in the list.
+              Indexing starts from 0.
+            </li>
+            <li>
+              <b>Slicing:</b> Retrieve a portion of the list using a range of
+              indices.
+            </li>
+            <li>
+              <b>Appending:</b> Add an element to the end of the list using
+              <code>append()</code>.
+            </li>
+            <li>
+              <b>Inserting:</b> Insert an element at a specific position using
+              <code>insert()</code>.
+            </li>
+            <li>
+              <b>Removing:</b> Remove an element by its value using
+              <code>remove()</code> or by its position using <code>pop()</code>.
+            </li>
+          </ul>
+          <pre class="code-block">
+# Appending and inserting elements
 fruits.append("orange")
 fruits.insert(1, "blueberry")
 
 # Removing elements
 fruits.remove("banana")
-popped_fruit = fruits.pop(2)  # Removes the element at index 2</pre>
+popped_fruit = fruits.pop(2)  # Removes the element at index 2</pre
+          >
 
-                <h3>List Methods</h3>
-                <p>Python provides several built-in methods for lists:</p>
-                <ul>
-                    <li><b>append():</b> Adds an element to the end of the list.</li>
-                    <li><b>extend():</b> Adds all elements from another list to the end.</li>
-                    <li><b>pop():</b> Removes and returns an element at a given index.</li>
-                    <li><b>remove():</b> Removes the first occurrence of a value.</li>
-                    <li><b>sort():</b> Sorts the list in ascending order.</li>
-                    <li><b>reverse():</b> Reverses the elements of the list in place.</li>
-                </ul>
-                <pre class="code-block"># Sorting and reversing the list
+          <h3>List Methods</h3>
+          <p>Python provides several built-in methods for lists:</p>
+          <ul>
+            <li><b>append():</b> Adds an element to the end of the list.</li>
+            <li>
+              <b>extend():</b> Adds all elements from another list to the end.
+            </li>
+            <li>
+              <b>pop():</b> Removes and returns an element at a given index.
+            </li>
+            <li><b>remove():</b> Removes the first occurrence of a value.</li>
+            <li><b>sort():</b> Sorts the list in ascending order.</li>
+            <li>
+              <b>reverse():</b> Reverses the elements of the list in place.
+            </li>
+          </ul>
+          <pre class="code-block">
+# Sorting and reversing the list
 fruits.sort()  # Sorts alphabetically
-fruits.reverse()  # Reverses the order of elements</pre>
-            </section>
+fruits.reverse()  # Reverses the order of elements</pre
+          >
+        </section>
 
-            <section class="tuples">
-                <h2>Python Tuples</h2>
-                <p>A tuple is an ordered, immutable collection of items. Unlike lists, tuples cannot be modified after they are created.</p>
-                
-                <h3>Creating Tuples and Accessing Elements</h3>
-                <p>Tuples are created using parentheses <code>()</code>. You can access elements in a tuple just like in a list.</p>
-                <pre class="code-block"># Creating a tuple
+        <section class="list-indexing">
+          <h2>List Indexing</h2>
+          <p>
+            List indexing is the method of accessing elements in a list by their
+            position. Python uses zero-based indexing, meaning the first element
+            of the list is at index 0, the second at index 1, and so on.
+          </p>
+
+          <h3>Positive and Negative Indexing</h3>
+          <p>
+            Positive indexing starts from the beginning of the list, while
+            negative indexing allows you to access elements starting from the
+            end of the list.
+          </p>
+          <pre class="code-block">
+# Positive and negative indexing
+fruits = ["apple", "banana", "cherry", "orange", "blueberry"]
+print(fruits[1])  # Output: "banana" (positive index)
+print(fruits[-2])  # Output: "orange" (negative index)</pre
+          >
+
+          <h3>Slicing Lists</h3>
+          <p>
+            Slicing lets you access a portion of the list by specifying a range
+            of indices. The syntax is <code>list[start:end:step]</code>, where
+            <code>start</code> is the index to begin the slice,
+            <code>end</code> is the index to stop (excluding the end index), and
+            <code>step</code> determines how many elements to skip between
+            indices (optional).
+          </p>
+
+          <p>Key Points:</p>
+          <ul>
+            <li>
+              The slice includes the start index but excludes the end index.
+            </li>
+            <li>
+              If the start index is omitted, slicing starts from the beginning
+              of the list.
+            </li>
+            <li>
+              If the end index is omitted, slicing goes to the end of the list.
+            </li>
+            <li>
+              If the step is omitted, it defaults to 1, meaning no elements are
+              skipped.
+            </li>
+          </ul>
+          <pre class="code-block">
+# Slicing examples
+print(fruits[1:4])  # Output: ['banana', 'cherry', 'orange']
+print(fruits[:3])   # Output: ['apple', 'banana', 'cherry']
+print(fruits[2:])   # Output: ['cherry', 'orange', 'blueberry']
+print(fruits[::2])  # Output: ['apple', 'cherry', 'blueberry'] (every 2nd element)
+print(fruits[::-1])  # Output: ['blueberry', 'orange', 'cherry', 'banana', 'apple'] (reverse order)</pre
+          >
+
+          <h3>Modifying Elements via Indexing</h3>
+          <p>
+            Lists are mutable, meaning you can change individual elements by
+            assigning a new value to a specific index. You can also modify
+            multiple elements at once using slicing.
+          </p>
+          <pre class="code-block">
+# Modifying a single element
+fruits[0] = "grape"
+print(fruits)  # Output: ['grape', 'banana', 'cherry', 'orange', 'blueberry']
+
+# Modifying multiple elements using slicing
+fruits[1:3] = ["kiwi", "mango"]
+print(fruits)  # Output: ['grape', 'kiwi', 'mango', 'orange', 'blueberry']</pre
+          >
+
+          <h3>Deleting Elements via Indexing</h3>
+          <p>
+            You can remove elements by assigning an empty list to a slice or
+            using the <code>del</code> statement.
+          </p>
+          <pre class="code-block">
+# Deleting elements using slicing
+fruits[1:3] = []
+print(fruits)  # Output: ['grape', 'orange', 'blueberry']
+
+# Deleting elements using del
+del fruits[0]
+print(fruits)  # Output: ['orange', 'blueberry']</pre
+          >
+        </section>
+
+        <section class="list-comprehension">
+          <h2>List Comprehension</h2>
+          <p>
+            List comprehension offers a powerful, concise way to create and
+            modify lists in Python. It allows you to apply an expression to each
+            element in a sequence or range, optionally filtering elements with
+            conditions.
+          </p>
+
+          <h3>Basic List Comprehension</h3>
+          <p>The basic syntax for list comprehension is:</p>
+          <pre class="code-block">[expression for item in iterable]</pre>
+          <p>
+            This generates a list by evaluating the expression for each item in
+            the iterable (like a list or range). For example:
+          </p>
+          <pre class="code-block">
+# Creating a list of squares
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]</pre
+          >
+
+          <h3>List Comprehension with Conditions</h3>
+          <p>
+            List comprehension can include conditions to filter elements. You
+            can add an <code>if</code> clause after the <code>for</code> loop:
+          </p>
+          <pre class="code-block">
+[expression for item in iterable if condition]</pre
+          >
+          <p>For example, to create a list of even numbers:</p>
+          <pre class="code-block">
+# Filtering with a condition
+even_numbers = [x for x in range(10) if x % 2 == 0]
+print(even_numbers)  # Output: [0, 2, 4, 6, 8]</pre
+          >
+
+          <h3>Nesting in List Comprehension</h3>
+          <p>
+            You can also use nested loops in list comprehension. This is
+            particularly useful for creating lists based on combinations of
+            items from multiple iterables.
+          </p>
+          <pre class="code-block">
+# Nested list comprehension
+combinations = [(x, y) for x in range(2) for y in range(2)]
+print(combinations)  # Output: [(0, 0), (0, 1), (1, 0), (1, 1)]</pre
+          >
+
+          <h3>Modifying Lists with Comprehension</h3>
+          <p>
+            List comprehension is not limited to creating lists from scratch; it
+            can also be used to modify existing lists. For example, multiplying
+            each element in a list by a constant:
+          </p>
+          <pre class="code-block">
+# Modifying an existing list
+numbers = [1, 2, 3, 4]
+doubled = [x * 2 for x in numbers]
+print(doubled)  # Output: [2, 4, 6, 8]</pre
+          >
+
+          <h3>List Comprehension with Functions</h3>
+          <p>
+            You can apply functions to elements within list comprehensions. This
+            is useful for processing lists of data.
+          </p>
+          <pre class="code-block">
+# Using a function within list comprehension
+def square(x):
+    return x ** 2
+
+squared_numbers = [square(x) for x in range(5)]
+print(squared_numbers)  # Output: [0, 1, 4, 9, 16]</pre
+          >
+        </section>
+
+        <section class="tuples">
+          <h2>Python Tuples</h2>
+          <p>
+            A tuple is an ordered, immutable collection of items. This means
+            that the elements in a tuple have a specific order, and once a tuple
+            is created, its contents cannot be changed (i.e., you cannot add,
+            remove, or modify elements).
+          </p>
+
+          <h3>Creating Tuples and Accessing Elements</h3>
+          <p>
+            Tuples are created using parentheses <code>()</code>. Like lists,
+            you can access elements in a tuple using indexing. However, because
+            tuples are immutable, the elements cannot be reassigned after
+            creation.
+          </p>
+          <pre class="code-block">
+# Creating a tuple
 colors = ("red", "green", "blue")
-print(colors[1])  # Accessing the second element</pre>
+print(colors[1])  # Accessing the second element ("green")</pre
+          >
+          <p>
+            If you create a tuple with a single element, don't forget the
+            trailing comma:
+          </p>
+          <pre class="code-block">
+# Tuple with one element
+one_element_tuple = ("orange",)  # Note the comma
+print(type(one_element_tuple))  # Output: <class 'tuple'></pre
+          >
 
-                <h3>Differences Between Lists and Tuples</h3>
-                <ul>
-                    <li><b>Mutability:</b> Lists are mutable, meaning you can change, add, or remove elements. Tuples are immutable, so their content cannot be changed after creation.</li>
-                    <li><b>Use Cases:</b> Lists are used when you need a collection of items that can change over time. Tuples are used when the collection should remain constant.</li>
-                </ul>
+          <h3>Differences Between Lists and Tuples</h3>
+          <ul>
+            <li>
+              <b>Mutability:</b> Lists are mutable, meaning you can change, add,
+              or remove elements. Tuples are immutable, so their content cannot
+              be changed after creation.
+            </li>
+            <li>
+              <b>Syntax:</b> Lists are created using square brackets
+              <code>[]</code>, whereas tuples are created using parentheses
+              <code>()</code>.
+            </li>
+            <li>
+              <b>Use Cases:</b> Lists are used when you need a collection of
+              items that can change over time. Tuples are used when the
+              collection should remain constant, such as storing fixed data like
+              geographic coordinates or database records.
+            </li>
+          </ul>
 
-                <h3>Basic Tuple Operations</h3>
-                <ul>
-                    <li><b>Indexing:</b> Access elements by their position in the tuple.</li>
-                    <li><b>Slicing:</b> Retrieve a portion of the tuple using a range of indices.</li>
-                </ul>
-                <pre class="code-block"># Slicing a tuple
-color_slice = colors[0:2]  # ('red', 'green')</pre>
-            </section>
+          <h3>Basic Tuple Operations</h3>
+          <p>
+            While tuples are immutable, you can still perform a variety of
+            operations on them, such as accessing elements, slicing, and using
+            them in loops.
+          </p>
+          <ul>
+            <li>
+              <b>Indexing:</b> Access elements by their position in the tuple,
+              similar to lists.
+            </li>
+            <li>
+              <b>Slicing:</b> Retrieve a portion of the tuple using a range of
+              indices, just like in lists. The syntax is the same:
+              <code>tuple[start:end]</code>, where the <code>start</code> index
+              is inclusive, and the <code>end</code> index is exclusive.
+            </li>
+            <li>
+              <b>Concatenation:</b> You can concatenate tuples using the
+              <code>+</code> operator.
+            </li>
+            <li>
+              <b>Repetition:</b> Repeat tuples using the
+              <code>*</code> operator.
+            </li>
+          </ul>
+          <pre class="code-block">
+# Slicing a tuple
+color_slice = colors[0:2]  # ('red', 'green')
 
-            <section class="practice">
-                <h2>Practice</h2>
-                <h3>1. Create and Manipulate Lists</h3>
-                <p>Create a list of your favorite movies. Add two more movies to the list, remove one movie, and print the final list.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">movies = ["Inception", "The Matrix", "Interstellar"]
+# Concatenating tuples
+more_colors = colors + ("yellow", "purple")
+print(more_colors)  # ('red', 'green', 'blue', 'yellow', 'purple')
+
+# Repeating a tuple
+repeated_colors = colors * 2
+print(repeated_colors)  # ('red', 'green', 'blue', 'red', 'green', 'blue')</pre
+          >
+
+          <h3>Tuple Unpacking</h3>
+          <p>
+            One of the most powerful features of tuples is unpacking. You can
+            assign the elements of a tuple to variables in a single statement.
+          </p>
+          <pre class="code-block">
+# Tuple unpacking
+person = ("John", 25, "Engineer")
+name, age, profession = person
+print(name)  # Output: "John"
+print(age)   # Output: 25
+print(profession)  # Output: "Engineer"</pre
+          >
+          <p>
+            Tuple unpacking can be particularly useful when working with
+            functions that return multiple values:
+          </p>
+          <pre class="code-block">
+# Function returning multiple values as a tuple
+def get_person_info():
+    return ("Alice", 30, "Designer")
+
+name, age, profession = get_person_info()
+print(name, age, profession)  # Output: "Alice 30 Designer"</pre
+          >
+
+          <h3>Using Tuples in Loops</h3>
+          <p>
+            You can iterate over a tuple's elements using a
+            <code>for</code> loop, just as you would with lists:
+          </p>
+          <pre class="code-block">
+# Iterating over a tuple
+for color in colors:
+    print(color)
+# Output:
+# red
+# green
+# blue</pre
+          >
+
+          <h3>Immutability and Its Benefits</h3>
+          <p>
+            The immutability of tuples can be beneficial in certain scenarios:
+          </p>
+          <ul>
+            <li>
+              <b>Safety:</b> Once a tuple is created, it cannot be accidentally
+              modified, making it ideal for storing fixed data.
+            </li>
+            <li>
+              <b>Performance:</b> Tuples are generally faster than lists due to
+              their immutability. Python can optimize tuple operations better
+              since it knows the tuple's size and contents won’t change.
+            </li>
+            <li>
+              <b>Hashability:</b> Tuples can be used as keys in dictionaries or
+              added to sets, whereas lists cannot because they are mutable.
+            </li>
+          </ul>
+        </section>
+
+        <section class="practice">
+          <h2>Practice</h2>
+          <h3>1. Create and Manipulate Lists</h3>
+          <p>
+            Create a list of your favorite movies. Add two more movies to the
+            list, remove one movie, and print the final list.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+movies = ["Inception", "The Matrix", "Interstellar"]
 movies.append("The Dark Knight")
 movies.append("Fight Club")
 movies.remove("The Matrix")
-print(movies)</pre>
-                    </div>
-                </details>
+print(movies)</pre
+              >
+            </div>
+          </details>
 
-                <h3>2. Practice Slicing and Indexing Lists</h3>
-                <p>Given a list of numbers, print the first three numbers, the last three numbers, and every second number in the list.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">numbers = [10, 20, 30, 40, 50, 60, 70, 80]
+          <h3>2. Practice Slicing and Indexing Lists</h3>
+          <p>
+            Given a list of numbers, print the first three numbers, the last
+            three numbers, and every second number in the list.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+numbers = [10, 20, 30, 40, 50, 60, 70, 80]
 print(numbers[:3])  # First three numbers
 print(numbers[-3:])  # Last three numbers
-print(numbers[::2])  # Every second number</pre>
-                    </div>
-                </details>
+print(numbers[::2])  # Every second number</pre
+              >
+            </div>
+          </details>
 
-                <h3>3. Create and Access Tuples</h3>
-                <p>Create a tuple with the names of the months in a year. Access the tuple to print the first and last month.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">months = ("January", "February", "March", "April", "May", "June", 
+          <h3>3. Create and Access Tuples</h3>
+          <p>
+            Create a tuple with the names of the months in a year. Access the
+            tuple to print the first and last month.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+months = ("January", "February", "March", "April", "May", "June", 
           "July", "August", "September", "October", "November", "December")
 print(months[0])  # First month
-print(months[-1])  # Last month</pre>
-                    </div>
-                </details>
+print(months[-1])  # Last month</pre
+              >
+            </div>
+          </details>
 
-                <h3>4. Understand Tuple Immutability</h3>
-                <p>Try modifying a tuple by changing one of its elements. Observe the error message and explain why it occurs.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">months = ("January", "February", "March")
+          <h3>4. Understand Tuple Immutability</h3>
+          <p>
+            Try modifying a tuple by changing one of its elements. Observe the
+            error message and explain why it occurs.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+months = ("January", "February", "March")
 # Attempt to change an element (this will raise an error)
 # months[0] = "New January"
 
 # Output: TypeError: 'tuple' object does not support item assignment
-# Explanation: Tuples are immutable, meaning their elements cannot be changed after creation.</pre>
-                    </div>
-                </details>
+# Explanation: Tuples are immutable, meaning their elements cannot be changed after creation.</pre
+              >
+            </div>
+          </details>
 
-                <h3>5. Advanced List Manipulations</h3>
-                <p>Write a Python function that takes a list of numbers and returns a new list with each number squared, sorted in ascending order.</p>
-                <details>
-                    <summary>Solution</summary>
-                    <div>
-                        <pre class="code-block">def square_and_sort(numbers):
+          <h3>5. Advanced List Manipulations</h3>
+          <p>
+            Write a Python function that takes a list of numbers and returns a
+            new list with each number squared, sorted in ascending order.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def square_and_sort(numbers):
     squared_numbers = [x**2 for x in numbers]
     squared_numbers.sort()
     return squared_numbers
 
 numbers = [4, 2, 8, 1]
-print(square_and_sort(numbers))  # [1, 4, 16, 64]</pre>
-                    </div>
-                </details>
-            </section>
-        </main>
+print(square_and_sort(numbers))  # [1, 4, 16, 64]</pre
+              >
+            </div>
+          </details>
+        </section>
+        <!-- <p><a href="assignments/week7-practice.html">Practice Exercises</a></p> -->
+      </main>
     </div>
     <footer>
-        <p>&copy; 2024 We Codez</p>
+      <p>&copy; 2024 We Codez</p>
     </footer>
-</body>
+  </body>
 </html>
