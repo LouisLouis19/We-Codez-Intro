@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Programming - For Loops</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Introduction to Programming</h1>
+      <h2>Control Flow: For Loops</h2>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><a href="index.html">Programming Basics</a></li>
+            <li>
+              <a href="if_else_statement.html">If/Else Statements</a>
+            </li>
+            <li><a href="for_loops.html" class="active">For Loops</a></li>
+            <li><a href="week3.html">While Loops</a></li>
+            <li><a href="week4.html">Python Functions </a></li>
+            <li><a href="week5.html">Python Functions (Part 2)</a></li>
+            <li><a href="week6.html">Python Functions (Part 3)</a></li>
+            <li><a href="week7.html">Data Structures</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <section class="overview">
+          <h2>Overview</h2>
+          <p>
+            This section focuses on using `for` loops to iterate over sequences
+            in Python.
+          </p>
+        </section>
+
+        <section class="loops">
+          <h2>For Loops</h2>
+          <p>Basic structure:</p>
+          <pre class="code-block">
+for item in sequence:
+    # Code to execute for each item
+          </pre>
+
+          <p>Example:</p>
+          <pre class="code-block">
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+          </pre>
+        </section>
+
+        <section class="range-loop">
+          <h2>Using `range()` in For Loops</h2>
+          <p>Example with `range()`:</p>
+          <pre class="code-block">
+for i in range(1, 6):
+    print(i)
+          </pre>
+        </section>
+
+        <section class="break-continue">
+          <h2>Break and Continue Statements</h2>
+          <h3>Break Statement</h3>
+          <pre class="code-block">
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+          </pre>
+
+          <h3>Continue Statement</h3>
+          <pre class="code-block">
+for i in range(1, 10):
+    if i % 2 == 0:
+        continue
+    print(i)
+          </pre>
+        </section>
+
+        <section class="practice">
+          <h2>Practice</h2>
+          <p>Try out these exercises to reinforce your understanding:</p>
+
+          <h3>1. Print Numbers from 1 to 10</h3>
+          <p>
+            Write a program that prints numbers from 1 to 10 using a `for` loop.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        for i in range(1, 11):
+            print(i)
+            </pre>
+          </details>
+
+          <h3>2. Calculate the Sum of Numbers</h3>
+          <p>
+            Write a program that calculates the sum of all numbers from 1 to 100
+            using a `for` loop.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        total_sum = 0
+        for i in range(1, 101):
+            total_sum += i
+        print("Total sum:", total_sum)
+            </pre>
+          </details>
+
+          <h3>3. Print Each Character in a String</h3>
+          <p>
+            Write a program that prints each character of a string entered by
+            the user on a new line.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        text = input("Enter a string: ")
+        for char in text:
+            print(char)
+            </pre>
+          </details>
+
+          <h3>4. Count Down from 10 to 1</h3>
+          <p>
+            Write a program that counts down from 10 to 1 using a `for` loop.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        for i in range(10, 0, -1):
+            print(i)
+            </pre>
+          </details>
+
+          <h3>5. List of Squares</h3>
+          <p>
+            Write a program that prints the square of each number from 1 to 5.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        for i in range(1, 6):
+            print(i ** 2)
+            </pre>
+          </details>
+
+          <h3>6. Print Multiples of 3</h3>
+          <p>
+            Write a program that prints the multiples of 3 between 1 and 30.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        for i in range(3, 31, 3):
+            print(i)
+            </pre>
+          </details>
+
+          <h3>7. Print a List of Names</h3>
+          <p>Write a program that prints each name from a list of names.</p>
+          <details>
+            <summary>Solution</summary>
+            <pre class="code-block">
+        names = ["Alice", "Bob", "Charlie", "David"]
+        for name in names:
+            print(name)
+            </pre>
+          </details>
+        </section>
+
+        <p>
+          <a href="assignments/for-loops-practice.html">Practice Exercises</a>
+        </p>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 We Codez</p>
+    </footer>
+  </body>
+</html>
