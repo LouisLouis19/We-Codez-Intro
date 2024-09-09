@@ -219,43 +219,7 @@ print(calculate_squares([4, 5, 9, 10, 16, 20, 25]))  # Output: [2, 3, 4, 5]
         </div>
       </details>
 
-      <h2>12. Filter Tuples by Divisibility</h2>
-      <p>
-        Write a function <code>filter_tuples_divisibility</code> that filters a
-        list of tuples, keeping only those where both elements are divisible by
-        a given number.
-      </p>
-      <details>
-        <summary>Solution</summary>
-        <div>
-          <pre class="code-block">
-def filter_tuples_divisibility(lst, divisor):
-    return [tup for tup in lst if all(x % divisor == 0 for x in tup)]
-
-print(filter_tuples_divisibility([(12, 6), (8, 3), (18, 9)], 3))  # Output: [(12, 6), (18, 9)]
-          </pre>
-        </div>
-      </details>
-
-      <h2>13. Filter Tuples by Index Sum</h2>
-      <p>
-        Write a function <code>filter_by_index_sum</code> that filters tuples
-        where the sum of the tuple's index position and its element is an even
-        number.
-      </p>
-      <details>
-        <summary>Solution</summary>
-        <div>
-          <pre class="code-block">
-def filter_by_index_sum(lst):
-    return [tup for idx, tup in enumerate(lst) if (idx + sum(tup)) % 2 == 0]
-
-print(filter_by_index_sum([(1, 2), (3, 4), (5, 6)]))  # Output: [(1, 2), (5, 6)]
-          </pre>
-        </div>
-      </details>
-
-      <h2>14. Filter Tuples by Difference</h2>
+      <h2>12. Filter Tuples by Difference</h2>
       <p>
         Write a function <code>filter_tuples_by_diff</code> that filters a list
         of tuples, keeping only those where the difference between the elements
@@ -273,32 +237,7 @@ print(filter_tuples_by_diff([(1, 5), (10, 3), (4, 7)], 3))  # Output: [(1, 5), (
         </div>
       </details>
 
-      <h2>15. Filter Tuples by Product</h2>
-      <p>
-        Write a function <code>filter_tuples_by_product</code> that returns
-        tuples whose product of elements is a prime number.
-      </p>
-      <details>
-        <summary>Solution</summary>
-        <div>
-          <pre class="code-block">
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def filter_tuples_by_product(lst):
-    return [tup for tup in lst if is_prime(tup[0] * tup[1])]
-
-print(filter_tuples_by_product([(2, 3), (4, 5), (6, 7)]))  # Output: [(2, 3)]
-          </pre>
-        </div>
-      </details>
-
-      <h2>16. Filter Tuples by Square Condition</h2>
+      <h2>13. Filter Tuples by Square Condition</h2>
       <p>
         Write a function <code>filter_square_tuples</code> that filters tuples
         where one of the elements is a perfect square.
