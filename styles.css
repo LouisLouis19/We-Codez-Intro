@@ -44,7 +44,7 @@ header h1 {
 
 /* Sidebar Navigation Styling */
 .sidebar nav {
-  padding: 1.25rem; /* 20px equivalent */
+  padding: 0.5rem; /* 20px equivalent */
 }
 
 .sidebar nav ul {
@@ -54,7 +54,7 @@ header h1 {
 }
 
 .sidebar nav ul li {
-  margin: 0.9375rem 0; /* 15px equivalent */
+  margin: 1.5rem 0; /* 15px equivalent */
 }
 
 .sidebar nav ul li a {

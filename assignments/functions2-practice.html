@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions 2 Practice Exercises</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="assignments">
+    <h1>Python Practice Exercises</h1>
+    <p>
+      Complete the following exercises to strengthen your understanding of
+      Python Function Concepts.
+    </p>
+
+    <section class="practice">
+        <h2>1. Count Digits Above Threshold</h2>
+        <p>
+          Write a function <code>count_digits_above_threshold</code> that takes
+          an integer and an optional threshold as parameters (default value of
+          the threshold is 5). The function should return the count of digits in
+          the integer that are greater than the specified threshold.
+        </p>
+        <details>
+          <summary>Solution</summary>
+          <div>
+            <pre class="code-block">
+def count_digits_above_threshold(number, threshold=5):
+    count = 0
+    number = abs(number)  # Handle negative numbers
+    while number > 0:
+        digit = number % 10  # Get the last digit
+        if digit > threshold:
+            count += 1
+        number //= 10  # Remove the last digit
+    return count
+
+# Example usage
+print(count_digits_above_threshold(123456))  # Output: 1 (Only 6 is above threshold 5)
+print(count_digits_above_threshold(9876543210))  # Output: 4 (9, 8, 7, 6 are above threshold 5)
+print(count_digits_above_threshold(-456789))  # Output: 3 (6, 7, 8, 9 are above threshold 5)
+print(count_digits_above_threshold(12345))  # Output: 0 (No digits above threshold 5)</pre
+            >
+          </div>
+        </details>
+
+        <h2>2. Generating a Custom Greeting</h2>
+        <p>
+          Write a function <code>generate_greeting</code> that takes a name and an optional greeting type as parameters. The greeting type can be "formal", "informal", or "friendly", with a default value of "friendly". The function should return a greeting message based on the specified type:
+          <ul>
+            <li>If the greeting type is "formal", return "Good day, {name}." </li>
+            <li>If the greeting type is "informal", return "Yo, {name}!"</li>
+            <li>If the greeting type is "friendly", return "Hello, {name}! How's it going?"</li>
+          </ul>
+        </p>
+        <details>
+          <summary>Solution</summary>
+          <div>
+            <pre class="code-block">
+def generate_greeting(name, greeting_type="friendly"):
+    if greeting_type == "formal":
+        return f"Good day, {name}."
+    elif greeting_type == "informal":
+        return f"Yo, {name}!"
+    else:  # Default to "friendly"
+        return f"Hello, {name}! How's it going?"
+
+# Example usage
+print(generate_greeting("Alice"))  # Output: Hello, Alice! How's it going?
+print(generate_greeting("Bob", "formal"))  # Output: Good day, Bob.
+print(generate_greeting("Charlie", "informal"))  # Output: Yo, Charlie!</pre>
+          </div>
+        </details>
+      
+        <h2>3. Guess the Output: Shadowing</h2>
+        <p>
+          Analyze the following code snippet. What will be the output when you run this code? Provide your reasoning regarding local and global scope.
+        </p>
+        <pre class="code-block">
+y = 100  # Global variable
+
+def test_shadowing():
+    y = 50  # Local variable that shadows the global variable
+    print("Inside test_shadowing, y =", y)
+
+test_shadowing()
+print("Outside function, y =", y)</pre>
+        <details>
+          <summary>Solution</summary>
+          <div>
+            <pre class="code-block">
+# Output:
+# Inside test_shadowing, y = 50
+# Outside function, y = 100
+
+# Explanation:
+# 1. The function test_shadowing() defines a local variable y that shadows the global variable y.
+# 2. The print statement inside the function outputs the local y, which is 50.
+# 3. After the function call, the global variable y remains unchanged and is printed as 100.</pre>
+          </div>
+        </details>
+
+          <h2>4. Guess the Output</h2>
+          <p>
+            Examine the following code snippet. What will be the output when you run this code? Explain your reasoning about the use of global variables.
+          </p>
+          <pre class="code-block">
+count = 0  # Global variable
+
+def increment_count():
+    global count  # Access the global variable
+    count += 1
+
+def reset_count():
+    global count  # Access the global variable
+    count = 0
+
+increment_count()
+increment_count()
+reset_count()
+print("Final count =", count)</pre>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+# Output:
+# Final count = 0
+
+# Explanation:
+# 1. increment_count() is called twice, which increments the global variable count from 0 to 2.
+# 2. Then, reset_count() is called, which sets count back to 0.
+# 3. The final print statement outputs the value of the global count, which is now 0.</pre>
+            </div>
+          </details>
+        
+      
+        <h2>5. Guess the Output: Variable Scope</h2>
+        <p>
+          Consider the following code snippet. What will be the output when you run this code? Explain your reasoning based on the concepts of local and global variable scope.
+        </p>
+        <pre class="code-block">
+x = 10  # Global variable
+
+def scope_test():
+    x = 5  # Local variable
+    print("Inside function, x =", x)
+    
+    def inner_function():
+        global x  # Declare x as global to modify it
+        x += 2  # Increment the global x
+        print("Inside inner function, x =", x)
+    
+    inner_function()
+    print("After inner function, x =", x)
+
+scope_test()
+print("Outside function, x =", x)</pre>
+        <details>
+          <summary>Solution</summary>
+          <div>
+            <pre class="code-block">
+# Output:
+# Inside function, x = 5
+# Inside inner function, x = 12
+# After inner function, x = 5
+# Outside function, x = 12
+
+# Explanation:
+# 1. The first print statement inside scope_test() prints the local x, which is 5.
+# 2. The inner_function() modifies the global x (which was 10) by adding 2, making it 12. It then prints this value.
+# 3. After returning to scope_test(), the local variable x (which is still 5) is printed.
+# 4. Finally, the global variable x (now 12) is printed outside of the function.</pre>
+          </div>
+        </details>
+
+          <h2>6. Using `sum()`</h2>
+          <p>
+            Create a function <code>calculate_sum</code> that takes a list of numbers and returns their total using the <code>sum()</code> function. If the list is empty, return <code>0</code>.
+          </p>
+          <details>
+            <summary>Solution</summary>
+            <div>
+              <pre class="code-block">
+def calculate_sum(numbers):
+    return sum(numbers)
+
+# Example usage
+print(calculate_sum([1, 2, 3, 4]))  # Output: 10
+print(calculate_sum([]))  # Output: 0</pre>
+            </div>
+          </details>
+        
+
+            <h2>7. Using `sorted()`</h2>
+            <p>
+              Write a function <code>sort_numbers</code> that accepts a list of numbers and returns a new list with the numbers sorted in ascending order using the <code>sorted()</code> function.
+            </p>
+            <details>
+              <summary>Solution</summary>
+              <div>
+                <pre class="code-block">
+def sort_numbers(numbers):
+    return sorted(numbers)
+
+# Example usage
+print(sort_numbers([5, 3, 9, 1]))  # Output: [1, 3, 5, 9]</pre>
+              </div>
+            </details>
+          
+              <h2>8. Using `abs()` and `append()`</h2>
+              <p>
+                Create a function <code>absolute_values</code> that takes a list of numbers (which can include negative values) and returns a new list containing the absolute values of those numbers using the <code>abs()</code> function.
+              </p>
+              <details>
+                <summary>Solution</summary>
+                <div>
+                  <pre class="code-block">
+def absolute_values(numbers):
+    absolute_list = []
+    for num in numbers:
+        absolute_list.append(abs(num))
+    return absolute_list
+
+# Example usage
+print(absolute_values([-1, -2, 3, -4]))  # Output: [1, 2, 3, 4]</pre>
+                </div>
+              </details>
+            
+
+
+
+
+      <h2>9. Product of List with Default Exclusion</h2>
+      <p>
+        Write a function <code>product_of_list</code> that takes a list of
+        numbers and an optional value to exclude from the product (default is
+        None). The function should return the product of all numbers in the list
+        that are not equal to the excluded value.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+def product_of_list(numbers, exclude=None):
+    product = 1
+    for num in numbers:
+        if num != exclude:
+            product *= num
+    return product
+
+numbers = [2, 3, 4, 5]
+print(product_of_list(numbers))            # Output: 120
+print(product_of_list(numbers, exclude=3)) # Output: 40
+          </pre>
+        </div>
+      </details>
+
+      <h2>10. Finding Prime Numbers</h2>
+      <p>
+        Write a function <code>is_prime</code> that takes an integer as an input and returns <code>True</code> if the number is a prime number and <code>False</code> otherwise. A prime number is defined as a number greater than 1 that has no divisors other than 1 and itself. Include edge cases to handle numbers less than or equal to 1.
+      </p>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Example usage
+print(is_prime(2))  # Output: True
+print(is_prime(3))  # Output: True
+print(is_prime(4))  # Output: False
+print(is_prime(17))  # Output: True
+print(is_prime(1))  # Output: False
+print(is_prime(0))  # Output: False
+print(is_prime(-5))  # Output: False</pre>
+        </div>
+      </details>
+      
+    </section>
+    <br />
+    <p><a href="../functions_2.html">Back to Main Page</a></p>
+  </body>
+</html>
