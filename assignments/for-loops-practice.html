@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 2 Practice Exercises - For Loops</title>
+    <title>For Loops Practice Exercises</title>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="assignments">
     <h1>Python Practice Exercises - For Loops</h1>
     <p>
-      Complete the following exercises to strengthen your understanding of for
-      loops.
+      Complete the following exercises to strengthen your understanding of For
+      Loops Concepts.
     </p>
 
     <section class="task">
-      <h2>1. Generate Multiples of a Number</h2>
+      <h2>1. Generate Multiples of a Fixed Number</h2>
       <p>
-        Write a program that takes a number from the user and prints its first
-        10 multiples using a `for` loop.
+        Write a program that prints the first 10 multiples of the number 5 using
+        a `for` loop.
       </p>
+      <pre class="code-block">number = 5</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-number = int(input("Enter a number: "))
+number = 5
 for i in range(1, 11):
     print(number * i)</pre
           >
@@ -32,16 +33,16 @@ for i in range(1, 11):
     </section>
 
     <section class="task">
-      <h2>2. Sum of Even Numbers</h2>
+      <h2>2. Sum of Even Numbers Up to 20</h2>
       <p>
         Write a program that calculates the sum of all even numbers between 1
-        and a user-defined number using a `for` loop.
+        and 20 using a `for` loop.
       </p>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-limit = int(input("Enter a limit: "))
+limit = 20
 sum_even = 0
 for i in range(2, limit + 1, 2):
     sum_even += i
@@ -62,71 +63,76 @@ print("Sum of even numbers:", sum_even)</pre
         <div>
           <pre class="code-block">
 a, b = 0, 1
-print(a, end=' ')
+print(a)
 for _ in range(9):
     a, b = b, a + b
-    print(a, end=' ')
-print()</pre
+    print(a)</pre
           >
         </div>
       </details>
     </section>
 
     <section class="task">
-      <h2>4. Print a Pyramid Pattern</h2>
+      <h2>4. Count Numbers Greater Than 10</h2>
       <p>
-        Write a program that prints a pyramid pattern of stars. The number of
-        rows should be taken from the user.
+        Write a program that counts and prints the number of elements in a list
+        that are greater than 10.
       </p>
+      <pre class="code-block">numbers = [4, 12, 7, 15, 9, 20, 3]</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-rows = int(input("Enter number of rows: "))
-for i in range(1, rows + 1):
-    print(' ' * (rows - i) + '*' * (2 * i - 1))</pre
-          >
-        </div>
-      </details>
-    </section>
-
-    <section class="task">
-      <h2>5. Count Vowels in a String</h2>
-      <p>
-        Write a program that counts the number of vowels in a user-provided
-        string using a `for` loop.
-      </p>
-      <details>
-        <summary>Solution</summary>
-        <div>
-          <pre class="code-block">
-text = input("Enter a string: ")
-vowels = 'aeiouAEIOU'
+numbers = [4, 12, 7, 15, 9, 20, 3]
 count = 0
-for char in text:
-    if char in vowels:
+
+for num in numbers:
+    if num > 10:
         count += 1
-print("Number of vowels:", count)</pre
+
+print("Count of numbers greater than 10:", count)</pre
           >
         </div>
       </details>
     </section>
 
     <section class="task">
-      <h2>6. Reverse a String</h2>
+      <h2>5. Find the Maximum Number in a List</h2>
       <p>
-        Write a program that takes a string input from the user and prints the
-        string in reverse order using a `for` loop.
+        Write a program that finds and prints the maximum number from the list
+        [10, 25, 15, 30, 5].
       </p>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-text = input("Enter a string: ")
-reversed_text = ""
-for char in text:
-    reversed_text = char + reversed_text
-print("Reversed string:", reversed_text)</pre
+  numbers = [10, 25, 15, 30, 5]
+  max_num = numbers[0]
+  for num in numbers:
+      if num > max_num:
+          max_num = num
+  print("The maximum number is:", max_num)</pre
+          >
+        </div>
+      </details>
+    </section>
+
+    <section class="task">
+      <h2>6. Calculate the Sum of a List of Numbers</h2>
+      <p>
+        Write a program that calculates and prints the sum of the numbers in a
+        list.
+      </p>
+      <pre class="code-block">numbers = [1, 2, 3, 4, 5]</pre>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+numbers = [1, 2, 3, 4, 5]
+total_sum = 0
+for num in numbers:
+    total_sum += num
+print("The sum of the numbers is:", total_sum)</pre
           >
         </div>
       </details>
@@ -135,14 +141,15 @@ print("Reversed string:", reversed_text)</pre
     <section class="task">
       <h2>7. Factorial of a Number</h2>
       <p>
-        Write a program that takes a number from the user and calculates its
-        factorial using a `for` loop.
+        Write a program that calculates the factorial of a number using a `for`
+        loop.
       </p>
+      <pre class="code-block">number = 5</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-number = int(input("Enter a number: "))
+number = 5
 factorial = 1
 for i in range(1, number + 1):
     factorial *= i
@@ -153,56 +160,47 @@ print("Factorial:", factorial)</pre
     </section>
 
     <section class="task">
-      <h2>8. Sum of Digits</h2>
+      <h2>8. Count Odd and Even Numbers</h2>
       <p>
-        Write a program that takes an integer input from the user and calculates
-        the sum of its digits using a `for` loop.
+        Write a program that counts the number of odd and even numbers in a list
+        using `for` loop.
       </p>
+      <pre class="code-block">numbers = [3, 8, 12, 15, 7, 10, 21, 14]</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-number = input("Enter a number: ")
-sum_digits = 0
-for digit in number:
-    sum_digits += int(digit)
-print("Sum of digits:", sum_digits)</pre
+numbers = [3, 8, 12, 15, 7, 10, 21, 14]
+count_odd = 0
+count_even = 0
+
+for num in numbers:
+    if num % 2 == 0:
+        count_even += 1
+    else:
+        count_odd += 1
+
+print("Count of even numbers:", count_even)
+print("Count of odd numbers:", count_odd)</pre
           >
         </div>
       </details>
     </section>
 
     <section class="task">
-      <h2>9. Create a Multiplication Table</h2>
-      <p>
-        Write a program that takes a number from the user and prints a
-        multiplication table up to 10 using a `for` loop.
-      </p>
-      <details>
-        <summary>Solution</summary>
-        <div>
-          <pre class="code-block">
-number = int(input("Enter a number: "))
-for i in range(1, 11):
-    print(f"{number} x {i} = {number * i}")</pre
-          >
-        </div>
-      </details>
-    </section>
-
-    <section class="task">
-      <h2>10. Sum of Odd Numbers</h2>
+      <h2>9. Sum of Odd Numbers</h2>
       <p>
         Write a program that calculates the sum of all odd numbers between 1 and
-        a user-defined number using a `for` loop.
+        a number using a `for` loop.
       </p>
+      <pre class="code-block">number = 10</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-limit = int(input("Enter a limit: "))
+number = 10
 sum_odd = 0
-for i in range(1, limit + 1, 2):
+for i in range(1, number + 1, 2):
     sum_odd += i
 print("Sum of odd numbers:", sum_odd)</pre
           >
@@ -210,7 +208,31 @@ print("Sum of odd numbers:", sum_odd)</pre
       </details>
     </section>
 
+    <section class="task">
+      <h2>9. Count Numbers Greater Than Their Previous</h2>
+      <p>
+        Write a program that counts how many times a number in a list that is
+        greater than the number that came before it.
+      </p>
+      <pre class="code-block">numbers = [5, 3, 8, 6, 10, 15, 7, 18]]</pre>
+      <details>
+        <summary>Solution</summary>
+        <div>
+          <pre class="code-block">
+numbers = [5, 3, 8, 6, 10, 15, 7, 18]
+count = 0
+
+for i in range(1, len(numbers)):
+    if numbers[i] > numbers[i - 1]:
+        count += 1
+
+print("Count of numbers greater than their previous:", count)</pre
+          >
+        </div>
+      </details>
+    </section>
+
     <br />
-    <p><a href="../index.html">Back to Main Page</a></p>
+    <p><a href="../for_loops.html">Back to Main Page</a></p>
   </body>
 </html>

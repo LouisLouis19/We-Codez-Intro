@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 1 Practice Exercises</title>
+    <title>If-Else Practice Exercises</title>
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="assignments">
     <h1>Python Practice Exercises</h1>
     <p>
-      Complete the following exercises to strengthen your understanding of Week
-      1 Concepts
+      Complete the following exercises to strengthen your understanding of
+      If-Else Concepts
     </p>
 
     <section class="task">
@@ -24,15 +24,20 @@ number = -5
 if number >= 0:
     print("The number is positive.")
 else:
-    print("The number is negative.")
-            </pre
+    print("The number is negative.")</pre
         >
       </details>
     </section>
 
     <section class="task">
       <h2>2. Elif Statement</h2>
-      <p>Determine the life stage based on age:</p>
+      <p>Determine the life stage of a person based on their age.</p>
+      <ul>
+        <li><strong>Child:</strong> age is less than 13</li>
+        <li><strong>Teenager:</strong> age is between 13 and 19, inclusive</li>
+        <li><strong>Adult:</strong> age is between 20 and 64, inclusive</li>
+        <li><strong>Senior:</strong> age is 65 or older</li>
+      </ul>
       <pre class="code-block">age = 65</pre>
       <details>
         <summary>Solution</summary>
@@ -45,8 +50,7 @@ elif 13 <= age < 20:
 elif 20 <= age < 65:
     print("Adult")
 else:
-    print("Senior")
-            </pre
+    print("Senior")</pre
         >
       </details>
     </section>
@@ -62,8 +66,7 @@ number = 7
 if number % 2 == 0:
     print("The number is even.")
 else:
-    print("The number is odd.")
-            </pre
+    print("The number is odd.")</pre
         >
       </details>
     </section>
@@ -85,8 +88,7 @@ elif number % 3 == 0:
 elif number % 5 == 0:
     print("Divisible by 5.")
 else:
-    print("Not divisible by 3 or 5.")
-            </pre
+    print("Not divisible by 3 or 5.")</pre
         >
       </details>
     </section>
@@ -104,38 +106,60 @@ if a >= b and a >= c:
 elif b >= a and b >= c:
     print("The largest number is:", b)
 else:
-    print("The largest number is:", c)
-            </pre
+    print("The largest number is:", c)</pre
         >
       </details>
     </section>
 
     <section class="task">
       <h2>6. Check Leap Year</h2>
-      <p>Write a program to check if a year is a leap year:</p>
+      <p>
+        Write a program to check if a year is a leap year. A year is a leap year
+        if:
+      </p>
+      <ul>
+        <li>
+          It is divisible by 4, <strong>and</strong> not divisible by 100,
+          <strong>or</strong>
+        </li>
+        <li>It is divisible by 400.</li>
+      </ul>
+      <p>Example:</p>
       <pre class="code-block">year = 2020</pre>
+
       <details>
         <summary>Solution</summary>
         <pre class="code-block">
 year = 2020
-if year % 4 == 0:
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("Leap year")
-        else:
-            print("Not a leap year")
-    else:
-        print("Leap year")
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
 else:
-    print("Not a leap year")
-            </pre
+    print("Not a leap year")</pre
         >
       </details>
     </section>
 
     <section class="task">
       <h2>7. Check Temperature Range</h2>
-      <p>Categorize a temperature:</p>
+      <p>
+        Write a program that categorizes the temperature based on its value.
+      </p>
+      <ul>
+        <li>
+          If the temperature is 30 degrees Celsius or above, print "It's hot."
+        </li>
+        <li>
+          If the temperature is between 20 (inclusive) and 30 (exclusive)
+          degrees Celsius, print "It's warm."
+        </li>
+        <li>
+          If the temperature is between 10 (inclusive) and 20 (exclusive)
+          degrees Celsius, print "It's cool."
+        </li>
+        <li>
+          If the temperature is below 10 degrees Celsius, print "It's cold."
+        </li>
+      </ul>
       <pre class="code-block">temperature = 30</pre>
       <details>
         <summary>Solution</summary>
@@ -148,46 +172,23 @@ elif 20 <= temperature < 30:
 elif 10 <= temperature < 20:
     print("It's cool.")
 else:
-    print("It's cold.")
-            </pre
+    print("It's cold.")</pre
         >
       </details>
     </section>
 
     <section class="task">
-      <h2>8. Check if a Number is Positive, Even, and Divisible by 4</h2>
+      <h2>8. Determine Zero, Odd or Even</h2>
       <p>
-        Write a program that checks if a number is positive, even, and divisible
-        by 4:
+        Write a program that determines if a given number is zero, odd, or even.
+        Print the result.
       </p>
-      <pre class="code-block">number = 8</pre>
-      <details>
-        <summary>Solution</summary>
-        <pre class="code-block">
-number = 8
-if number > 0 and number % 2 == 0 and number % 4 == 0:
-    print("The number is positive, even, and divisible by 4.")
-elif number > 0 and number % 2 == 0:
-    print("The number is positive and even but not divisible by 4.")
-elif number <= 0:
-    print("The number is not positive.")
-else:
-    print("The number is odd.")</pre
-        >
-      </details>
-    </section>
-
-    <section class="task">
-      <h2>9. Determine Zero, Odd or Even</h2>
-      <p>
-        Write a program that takes a number from the user and determines if it
-        is zero, odd, or even. Print the result.
-      </p>
+      <pre class="code-block">number = 3</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-number = int(input("Enter a number: "))
+number = 3
 if number == 0:
     print("The number is zero")
 elif number % 2 == 0:
@@ -200,18 +201,19 @@ else:
     </section>
 
     <section class="task">
-      <h2>10. Grade Classification</h2>
+      <h2>9. Grade Classification</h2>
       <p>
         Write a program that reads a score from the user and classifies it into
         grades: 'A' for scores 90 and above, 'B' for scores between 80 and 89,
         'C' for scores between 70 and 79, and 'F' for scores below 70. Print the
         grade.
       </p>
+      <pre class="code-block">score = 85</pre>
       <details>
         <summary>Solution</summary>
         <div>
           <pre class="code-block">
-score = int(input("Enter your score: "))
+score = 85
 if score >= 90:
     print("Grade: A")
 elif score >= 80:
@@ -226,6 +228,6 @@ else:
     </section>
 
     <br />
-    <p><a href="../index.html">Back to Main Page</a></p>
+    <p><a href="../if_else_statement.html">Back to Main Page</a></p>
   </body>
 </html>
