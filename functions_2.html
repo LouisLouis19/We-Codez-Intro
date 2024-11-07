@@ -48,12 +48,11 @@
           </p>
           <p>Example:</p>
           <pre class="code-block">
-      def greet(name):
-          print("Hello, " + name)
-      
-      greet("Alice")  # Output: Hello, Alice
-      greet("Bob")    # Output: Hello, Bob
-          </pre>
+def greet(name):
+    print("Hello, " + name)
+
+greet("Alice")  # Output: Hello, Alice
+greet("Bob")    # Output: Hello, Bob</pre>
           <p>
               Here, <code>name</code> is a parameter that allows us to greet any user dynamically. <code>greet("Alice")</code> and <code>greet("Bob")</code> demonstrate how this function adapts to different inputs. The flexibility of parameters enables the function to be reused with different values.
           </p>
@@ -104,8 +103,7 @@ def introduce(first_name, last_name, age):
     print(f"My name is {first_name} {last_name} and I am {age} years old.")
 
 introduce("Jane", "Doe", 28)            # Positional
-introduce(age=30, first_name="John", last_name="Smith")  # Keyword
-          </pre>
+introduce(age=30, first_name="John", last_name="Smith")  # Keyword</pre>
           <p>
               In the example above, the positional call <code>introduce("Jane", "Doe", 28)</code> assigns values based on their order, while the keyword argument call <code>introduce(age=30, first_name="John", last_name="Smith")</code> assigns them explicitly, making the code more readable.
           </p>
